@@ -1,0 +1,13 @@
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\bin\Debug\net8.0\Meisy.Exception.deps.json
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\bin\Debug\net8.0\Meisy.Exception.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\bin\Debug\net8.0\Meisy.Exception.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.AssemblyInfoInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.AssemblyInfo.cs
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\refint\Meisy.Exception.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\ref\Meisy.Exception.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.ResourceErrorMessages.resources
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.csproj.GenerateResource.cache

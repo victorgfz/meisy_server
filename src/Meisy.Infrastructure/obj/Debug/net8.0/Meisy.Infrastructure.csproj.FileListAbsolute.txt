@@ -1,0 +1,15 @@
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\bin\Debug\net8.0\Meisy.Infrastructure.deps.json
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\bin\Debug\net8.0\Meisy.Infrastructure.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\bin\Debug\net8.0\Meisy.Infrastructure.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\bin\Debug\net8.0\Meisy.Domain.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\bin\Debug\net8.0\Meisy.Domain.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.AssemblyInfo.cs
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.In.05C6C31C.Up2Date
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\refint\Meisy.Infrastructure.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\Meisy.Infrastructure.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Infrastructure\obj\Debug\net8.0\ref\Meisy.Infrastructure.dll

@@ -1,0 +1,11 @@
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\bin\Debug\net8.0\Meisy.Domain.deps.json
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\bin\Debug\net8.0\Meisy.Domain.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\bin\Debug\net8.0\Meisy.Domain.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.AssemblyInfoInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.AssemblyInfo.cs
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\refint\Meisy.Domain.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\ref\Meisy.Domain.dll

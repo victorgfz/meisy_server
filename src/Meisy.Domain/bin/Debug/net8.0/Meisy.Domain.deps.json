@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Meisy.Domain/1.0.0": {
+        "runtime": {
+          "Meisy.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Meisy.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

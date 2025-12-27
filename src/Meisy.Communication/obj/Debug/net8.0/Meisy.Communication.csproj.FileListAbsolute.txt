@@ -1,0 +1,11 @@
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\bin\Debug\net8.0\Meisy.Communication.deps.json
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\bin\Debug\net8.0\Meisy.Communication.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\bin\Debug\net8.0\Meisy.Communication.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.AssemblyInfoInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.AssemblyInfo.cs
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\refint\Meisy.Communication.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.pdb
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\ref\Meisy.Communication.dll

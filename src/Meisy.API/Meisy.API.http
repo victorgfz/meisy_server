@@ -1,0 +1,6 @@
+@Meisy.API_HostAddress = http://localhost:5020
+
+GET {{Meisy.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
