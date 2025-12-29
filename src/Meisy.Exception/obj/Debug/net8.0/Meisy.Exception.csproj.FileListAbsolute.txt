@@ -11,3 +11,4 @@ C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Ex
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\ref\Meisy.Exception.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.ResourceErrorMessages.resources
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.csproj.GenerateResource.cache
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Exception\obj\Debug\net8.0\Meisy.Exception.sourcelink.json

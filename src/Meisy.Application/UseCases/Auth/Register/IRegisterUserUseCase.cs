@@ -5,6 +5,6 @@ namespace Meisy.Application.UseCases.Auth.Register
 {
     public interface IRegisterUserUseCase
     {
-        Task<ResponseRegisterUserJson> Execute(RequestRegisterUserJson request);
+        Task<ResponseLoginJson> Execute(RequestRegisterUserJson request);
     }
 }

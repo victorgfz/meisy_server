@@ -23,8 +23,8 @@ namespace Meisy.Infrastructure.Security.Token
         {
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.CompanyId.ToString())
+                new Claim("UserId", user.Id.ToString()),
+                new Claim("CompanyId", user.CompanyId.ToString())
             };
             var tokenDescriptor = new SecurityTokenDescriptor
             {

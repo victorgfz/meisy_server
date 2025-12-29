@@ -9,3 +9,4 @@ C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meis
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\refint\Meisy.Communication.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.pdb
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\ref\Meisy.Communication.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Communication\obj\Debug\net8.0\Meisy.Communication.sourcelink.json

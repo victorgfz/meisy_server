@@ -7,6 +7,7 @@ using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.Company;
 using Meisy.Domain.Repositories.User;
 using Meisy.Domain.Security.Cryptography;
+using Meisy.Domain.Security.Token;
 using Meisy.Exception;
 using Meisy.Exception.ExceptionBase;
 using System.Security.Cryptography;
@@ -22,6 +23,7 @@ namespace Meisy.Application.UseCases.Auth.Register
         private readonly ICompanyReadRepository _companyReadRepository;
         private readonly IMapper _mapper;
         private readonly IPasswordEncrypter _bcrypt;
+        private readonly ITokenGenerator _tokenGenerator;
         public RegisterUserUseCase(
             IUnitOfWork unitOfWork,
             IUserWriteRepository userWriteRepository,
@@ -29,9 +31,11 @@ namespace Meisy.Application.UseCases.Auth.Register
             ICompanyWriteRepository companyWriteRepository,
             ICompanyReadRepository companyReadRepository,
             IMapper mapper,
-            IPasswordEncrypter bcrypt
+            IPasswordEncrypter bcrypt,
+            ITokenGenerator tokenGenerator
             )
         {
+            _tokenGenerator = tokenGenerator;
             _mapper = mapper;
             _bcrypt = bcrypt;
             _unitOfWork = unitOfWork;
@@ -41,7 +45,7 @@ namespace Meisy.Application.UseCases.Auth.Register
             _companyReadRepository = companyReadRepository;
         }
 
-        public async Task<ResponseRegisterUserJson> Execute(RequestRegisterUserJson request)
+        public async Task<ResponseLoginJson> Execute(RequestRegisterUserJson request)
         {
             if(string.IsNullOrWhiteSpace(request.CompanyCode))
             {
@@ -68,10 +72,10 @@ namespace Meisy.Application.UseCases.Auth.Register
             await _userWriteRepository.Add( entityUser );
             await _unitOfWork.Commit();
             
-            return new ResponseRegisterUserJson
+            return new ResponseLoginJson
             {
                 Name = request.Name,
-                Token = "token",
+                Token = _tokenGenerator.GenerateToken(entityUser),
             };
         }
 

@@ -75,10 +75,27 @@ builder.Services.AddAuthentication(config =>
 
 builder.Services.AddHttpContextAccessor();
 
-// 
+// cors config
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy
+            .AllowAnyOrigin()     // permite qualquer domínio
+            .AllowAnyMethod()     // GET, POST, PUT...
+            .AllowAnyHeader();    // permite qualquer header
+    });
+});
+
+
+
+//
 
 var app = builder.Build();
 
+// use cors
+app.UseCors("CorsPolicy");
 
 if (app.Environment.IsDevelopment())
 {

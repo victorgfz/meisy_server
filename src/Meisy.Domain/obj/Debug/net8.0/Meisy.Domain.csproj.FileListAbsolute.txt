@@ -9,3 +9,4 @@ C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domai
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\refint\Meisy.Domain.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.pdb
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\ref\Meisy.Domain.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Domain\obj\Debug\net8.0\Meisy.Domain.sourcelink.json

@@ -17,3 +17,4 @@ C:\Users\Victor\source\repos\Meisy\src\Meisy.Application\obj\Debug\net8.0\Meisy.
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Application\obj\Debug\net8.0\refint\Meisy.Application.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Application\obj\Debug\net8.0\Meisy.Application.pdb
 C:\Users\Victor\source\repos\Meisy\src\Meisy.Application\obj\Debug\net8.0\ref\Meisy.Application.dll
+C:\Users\Victor\source\repos\Meisy\src\Meisy.Application\obj\Debug\net8.0\Meisy.Application.sourcelink.json

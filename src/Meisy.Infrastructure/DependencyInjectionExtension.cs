@@ -1,15 +1,16 @@
 ﻿using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.Company;
+using Meisy.Domain.Repositories.Input;
 using Meisy.Domain.Repositories.User;
 using Meisy.Domain.Security.Cryptography;
 using Meisy.Domain.Security.Token;
 using Meisy.Domain.Services.LoggedUser;
 using Meisy.Infrastructure.Data;
 using Meisy.Infrastructure.Data.Repositories.Company;
+using Meisy.Infrastructure.Data.Repositories.Input;
 using Meisy.Infrastructure.Data.Repositories.User;
 using Meisy.Infrastructure.Security.Cryptography;
 using Meisy.Infrastructure.Security.Token;
-using Meisy.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,7 @@ namespace Meisy.Infrastructure
                 AddRepositories(services);
                 AddDbContext(services, configuration);
                 AddToken(services, configuration);
+            //
                  services.AddScoped<IUnitOfWork, UnitOfWork>();
                  services.AddScoped<IPasswordEncrypter, Bcrypt>();
                  services.AddScoped<ILoggedUser, LoggedUser>();
@@ -45,6 +47,8 @@ namespace Meisy.Infrastructure
                 services.AddScoped<IUserWriteRepository, UserRepository>();
                 services.AddScoped<ICompanyReadRepository, CompanyRepository>();
                 services.AddScoped<ICompanyWriteRepository, CompanyRepository>();
+                services.AddScoped<IInputReadOnlyRepository, InputRepository>();
+                services.AddScoped<IInputWriteOnlyRepository, InputRepository>();
             }
 
             private static void AddToken(IServiceCollection services, IConfiguration configuration)

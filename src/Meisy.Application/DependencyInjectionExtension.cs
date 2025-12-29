@@ -1,6 +1,10 @@
 ﻿using Meisy.Application.AutoMapper;
 using Meisy.Application.UseCases.Auth.Login;
 using Meisy.Application.UseCases.Auth.Register;
+using Meisy.Application.UseCases.Inputs.Delete;
+using Meisy.Application.UseCases.Inputs.GetAll;
+using Meisy.Application.UseCases.Inputs.Register;
+using Meisy.Application.UseCases.Inputs.Update;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Meisy.Application
@@ -18,6 +22,10 @@ namespace Meisy.Application
         {
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
             services.AddScoped<ILoginUseCase, LoginUseCase>();
+            services.AddScoped<IRegisterInputUseCase, RegisterInputUseCase>();
+            services.AddScoped<IGetAllInputUseCase, GetAllInputUseCase>();
+            services.AddScoped<IUpdateInputUseCase, UpdateInputUseCase>();
+            services.AddScoped<IDeleteInputUseCase, DeleteInputUseCase>();
         }
     }
 }

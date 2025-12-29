@@ -1,7 +1,10 @@
-﻿namespace Meisy.Application.UseCases.Inputs.Register
+﻿using Meisy.Communication.Requests;
+using Meisy.Communication.Responses;
+
+namespace Meisy.Application.UseCases.Inputs.Register
 {
     public interface IRegisterInputUseCase
     {
-        Task Execute();
+        Task<ResponseInputJson> Execute(RequestInputJson request);
     }
 }

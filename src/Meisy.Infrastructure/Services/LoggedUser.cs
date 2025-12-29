@@ -4,31 +4,40 @@ using Meisy.Domain.Services.LoggedUser;
 using Meisy.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 
-namespace Meisy.Infrastructure.Services
+public class LoggedUser : ILoggedUser
 {
-    public class LoggedUser : ILoggedUser
+    private readonly MeisyDbContext _dbContext;
+    private readonly ITokenProvider _tokenProvider;
+
+    public LoggedUser(MeisyDbContext dbContext, ITokenProvider tokenProvider)
     {
+        _dbContext = dbContext;
+        _tokenProvider = tokenProvider;
+    }
 
-        private readonly MeisyDbContext _dbContext;
-        private readonly ITokenProvider _tokenProvider;
+    public int GetUserId()
+    {
+        var token = _tokenProvider.TokenFromRequest();
+        var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
 
-        public LoggedUser(MeisyDbContext dbContext, ITokenProvider tokenProvider)
-        {
-            _dbContext = dbContext;
-            _tokenProvider = tokenProvider;
-        }
+        return int.Parse(jwt.Claims.First(c => c.Type == "UserId").Value);
+    }
 
-        public async Task<User> Get()
-        {
+    public int GetCompanyId()
+    {
+        var token = _tokenProvider.TokenFromRequest();
+        var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
 
-            string token = _tokenProvider.TokenFromRequest();
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var jwtSecurityToken = tokenHandler.ReadJwtToken(token);
-            var identifier = jwtSecurityToken.Claims.First(claim => claim.Type == ClaimTypes.NameIdentifier).Value;
+        return int.Parse(jwt.Claims.First(c => c.Type == "CompanyId").Value);
+    }
 
-            return await _dbContext.Users.AsNoTracking().FirstAsync(user => user.Id == int.Parse(identifier));
-        }
+    
+
+    public async Task<User> GetUser()
+    {
+        var userId = GetUserId();
+
+        return await _dbContext.Users.AsNoTracking().FirstAsync(u => u.Id == userId);
     }
 }

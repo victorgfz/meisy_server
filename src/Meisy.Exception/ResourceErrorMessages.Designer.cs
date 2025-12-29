@@ -61,6 +61,24 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The amount cannot be equal or less than zero!.
+        /// </summary>
+        public static string AMOUNT_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("AMOUNT_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description cannot be empty!.
+        /// </summary>
+        public static string EMPTY_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("EMPTY_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The email cannot be empty!.
         /// </summary>
         public static string EMPTY_EMAIL {
@@ -75,6 +93,15 @@ namespace Meisy.Exception {
         public static string EMPTY_NAME {
             get {
                 return ResourceManager.GetString("EMPTY_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This input was not found!.
+        /// </summary>
+        public static string INPUT_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("INPUT_NOT_FOUND", resourceCulture);
             }
         }
         
@@ -97,6 +124,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The date is invalid!.
+        /// </summary>
+        public static string INVALID_DATE {
+            get {
+                return ResourceManager.GetString("INVALID_DATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The email is invalid!.
         /// </summary>
         public static string INVALID_EMAIL {
@@ -111,6 +147,33 @@ namespace Meisy.Exception {
         public static string INVALID_PASSWORD {
             get {
                 return ResourceManager.GetString("INVALID_PASSWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This vlue for measurement unit is invalid!.
+        /// </summary>
+        public static string INVALID_VALUE_FOR_MEASUREMENT_UNIT {
+            get {
+                return ResourceManager.GetString("INVALID_VALUE_FOR_MEASUREMENT_UNIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This value for type is invalid!.
+        /// </summary>
+        public static string INVALID_VALUE_FOR_TYPE {
+            get {
+                return ResourceManager.GetString("INVALID_VALUE_FOR_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The price cannot be equal or less than zero!.
+        /// </summary>
+        public static string PRICE_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("PRICE_LESS_THAN_ZERO", resourceCulture);
             }
         }
         

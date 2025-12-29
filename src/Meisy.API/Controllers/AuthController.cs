@@ -12,7 +12,7 @@ namespace Meisy.API.Controllers
     {
 
         [HttpPost("register")]
-        [ProducesResponseType(typeof(ResponseRegisterUserJson), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseLoginJson), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Register(
             [FromServices] IRegisterUserUseCase useCase,
