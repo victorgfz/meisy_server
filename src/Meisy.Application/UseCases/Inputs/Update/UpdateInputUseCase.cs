@@ -31,7 +31,7 @@ namespace Meisy.Application.UseCases.Inputs.Update
             _unitOfWork = unitOfWork;
             
         }
-        public async Task Execute(int id, RequestInputJson request)
+        public async Task Execute(int id, RequestUpdateInputJson request)
         {
             var companyId = _loggedUser.GetCompanyId();
             Validate(request);
@@ -46,9 +46,9 @@ namespace Meisy.Application.UseCases.Inputs.Update
             await _unitOfWork.Commit();
         }
 
-        private void Validate(RequestInputJson request)
+        private void Validate(RequestUpdateInputJson request)
         {
-            var result = new InputValidator().Validate(request);
+            var result = new UpdateInputValidator().Validate(request);
             if (!result.IsValid)
             {
                 var errors = result.Errors.Select(e => e.ErrorMessage).ToList();

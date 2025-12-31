@@ -70,6 +70,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The cost per hour cannot be less than zero!.
+        /// </summary>
+        public static string COST_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("COST_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The description cannot be empty!.
         /// </summary>
         public static string EMPTY_DESCRIPTION {
@@ -165,6 +174,24 @@ namespace Meisy.Exception {
         public static string INVALID_VALUE_FOR_TYPE {
             get {
                 return ResourceManager.GetString("INVALID_VALUE_FOR_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The limit for this type of overhead has been reached!.
+        /// </summary>
+        public static string OVERHEAD_LIMIT_EXCEEDED {
+            get {
+                return ResourceManager.GetString("OVERHEAD_LIMIT_EXCEEDED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This overhead was not found!.
+        /// </summary>
+        public static string OVERHEAD_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("OVERHEAD_NOT_FOUND", resourceCulture);
             }
         }
         

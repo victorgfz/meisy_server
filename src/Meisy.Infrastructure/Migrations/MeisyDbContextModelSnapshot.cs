@@ -53,8 +53,8 @@ namespace Meisy.Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<double>("Amount")
+                        .HasColumnType("double");
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
@@ -83,6 +83,105 @@ namespace Meisy.Infrastructure.Migrations
                     b.HasIndex("CompanyId");
 
                     b.ToTable("Inputs");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.Overhead", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("CostPerHour")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Overheads");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("double");
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MeasurementUnit")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<TimeSpan>("ProductionTime")
+                        .HasColumnType("time(6)");
+
+                    b.Property<int>("Servings")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.ProductInput", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InputId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ProductionAmount")
+                        .HasColumnType("double");
+
+                    b.Property<int>("ProductionMeasurementUnit")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "InputId");
+
+                    b.HasIndex("CompanyId");
+
+                    b.HasIndex("InputId");
+
+                    b.ToTable("Product_Inputs");
                 });
 
             modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
@@ -132,6 +231,55 @@ namespace Meisy.Infrastructure.Migrations
                     b.Navigation("Company");
                 });
 
+            modelBuilder.Entity("Meisy.Domain.Entities.Overhead", b =>
+                {
+                    b.HasOne("Meisy.Domain.Entities.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.Product", b =>
+                {
+                    b.HasOne("Meisy.Domain.Entities.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.ProductInput", b =>
+                {
+                    b.HasOne("Meisy.Domain.Entities.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meisy.Domain.Entities.Input", "Input")
+                        .WithMany()
+                        .HasForeignKey("InputId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Meisy.Domain.Entities.Product", "Product")
+                        .WithMany("ProdutInputs")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+
+                    b.Navigation("Input");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
                 {
                     b.HasOne("Meisy.Domain.Entities.Company", "Company")
@@ -141,6 +289,11 @@ namespace Meisy.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("ProdutInputs");
                 });
 #pragma warning restore 612, 618
         }

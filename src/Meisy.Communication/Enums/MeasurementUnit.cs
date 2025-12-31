@@ -3,10 +3,10 @@
     public enum MeasurementUnit
     {
         g = 0,
-        ml = 1,
-        unit = 2,
-        tbsp = 3,
-        tsp = 4,
+        kg = 1,
+        ml = 2,
+        l = 3,
+        unit = 4
 
     }
 }

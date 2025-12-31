@@ -22,12 +22,17 @@ namespace Meisy.Application.AutoMapper
                 .ForMember(destination => destination.CreatedAt, config => config.MapFrom(_=> DateTime.UtcNow))
                 .ForMember(destination => destination.UpdatedAt, config => config.MapFrom(_=> DateTime.UtcNow));
 
-            CreateMap<RequestInputJson, Input>();
+            CreateMap<RequestRegisterInputJson, Input>();
+            CreateMap<RequestUpdateInputJson, Input>();
+            CreateMap<RequestRegisterOverheadJson, Overhead>();
+            CreateMap<RequestUpdateOverheadJson, Overhead>();
         }
 
         private void EntityToResponse()
         {
             CreateMap<Input, ResponseInputJson>();
+            CreateMap<Overhead, ResponseOverheadJson>();
+
         }
     }
 }

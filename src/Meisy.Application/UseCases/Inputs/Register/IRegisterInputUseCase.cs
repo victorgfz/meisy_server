@@ -5,6 +5,6 @@ namespace Meisy.Application.UseCases.Inputs.Register
 {
     public interface IRegisterInputUseCase
     {
-        Task<ResponseInputJson> Execute(RequestInputJson request);
+        Task<ResponseInputJson> Execute(RequestRegisterInputJson request);
     }
 }

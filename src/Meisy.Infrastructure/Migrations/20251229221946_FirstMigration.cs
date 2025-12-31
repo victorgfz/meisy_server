@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Meisy.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class NewMigrations : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -61,6 +61,30 @@ namespace Meisy.Infrastructure.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Overheads",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    CostPerHour = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
+                    CompanyId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Overheads", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Overheads_Companies_CompanyId",
+                        column: x => x.CompanyId,
+                        principalTable: "Companies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -94,6 +118,11 @@ namespace Meisy.Infrastructure.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Overheads_CompanyId",
+                table: "Overheads",
+                column: "CompanyId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Users_CompanyId",
                 table: "Users",
                 column: "CompanyId");
@@ -104,6 +133,9 @@ namespace Meisy.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Inputs");
+
+            migrationBuilder.DropTable(
+                name: "Overheads");
 
             migrationBuilder.DropTable(
                 name: "Users");

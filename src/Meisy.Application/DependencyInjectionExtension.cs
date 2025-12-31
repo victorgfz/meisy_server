@@ -5,6 +5,10 @@ using Meisy.Application.UseCases.Inputs.Delete;
 using Meisy.Application.UseCases.Inputs.GetAll;
 using Meisy.Application.UseCases.Inputs.Register;
 using Meisy.Application.UseCases.Inputs.Update;
+using Meisy.Application.UseCases.Overheads.GetAll;
+using Meisy.Application.UseCases.Overheads.Register;
+using Meisy.Application.UseCases.Overheads.Update;
+using Meisy.Application.UseCases.Products.Register;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Meisy.Application
@@ -22,10 +26,19 @@ namespace Meisy.Application
         {
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
             services.AddScoped<ILoginUseCase, LoginUseCase>();
+
             services.AddScoped<IRegisterInputUseCase, RegisterInputUseCase>();
             services.AddScoped<IGetAllInputUseCase, GetAllInputUseCase>();
             services.AddScoped<IUpdateInputUseCase, UpdateInputUseCase>();
             services.AddScoped<IDeleteInputUseCase, DeleteInputUseCase>();
+
+            services.AddScoped<IRegisterOverheadUseCase, RegisterOverheadUseCase>();
+            services.AddScoped<IGetAllOverheadUseCase, GetAllOverheadUseCase>();
+            services.AddScoped<IUpdateOverheadUseCase, UpdateOverheadUseCase>();
+
+            services.AddScoped<IRegisterProductUseCase, RegisterProductUseCase>();
+
+            
         }
     }
 }

@@ -165,4 +165,13 @@
   <data name="INPUT_NOT_FOUND" xml:space="preserve">
     <value>This input was not found!</value>
   </data>
+  <data name="COST_LESS_THAN_ZERO" xml:space="preserve">
+    <value>The cost per hour cannot be less than zero!</value>
+  </data>
+  <data name="OVERHEAD_LIMIT_EXCEEDED" xml:space="preserve">
+    <value>The limit for this type of overhead has been reached!</value>
+  </data>
+  <data name="OVERHEAD_NOT_FOUND" xml:space="preserve">
+    <value>This overhead was not found!</value>
+  </data>
 </root>

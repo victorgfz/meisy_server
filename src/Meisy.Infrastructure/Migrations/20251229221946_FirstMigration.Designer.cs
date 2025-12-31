@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meisy.Infrastructure.Migrations
 {
     [DbContext(typeof(MeisyDbContext))]
-    [Migration("20251227012150_NewMigrations")]
-    partial class NewMigrations
+    [Migration("20251229221946_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,6 +88,36 @@ namespace Meisy.Infrastructure.Migrations
                     b.ToTable("Inputs");
                 });
 
+            modelBuilder.Entity("Meisy.Domain.Entities.Overhead", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("CostPerHour")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Overheads");
+                });
+
             modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -125,6 +155,17 @@ namespace Meisy.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("Meisy.Domain.Entities.Input", b =>
+                {
+                    b.HasOne("Meisy.Domain.Entities.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.Overhead", b =>
                 {
                     b.HasOne("Meisy.Domain.Entities.Company", "Company")
                         .WithMany()

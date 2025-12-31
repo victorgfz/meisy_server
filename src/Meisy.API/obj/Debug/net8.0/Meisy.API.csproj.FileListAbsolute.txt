@@ -131,5 +131,5 @@ C:\Users\Victor\source\repos\Meisy\src\Meisy.API\bin\Debug\net8.0\ru\Microsoft.C
 C:\Users\Victor\source\repos\Meisy\src\Meisy.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Victor\source\repos\Meisy\src\Meisy.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Victor\source\repos\Meisy\src\Meisy.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Victor\source\repos\Meisy\src\Meisy.API\obj\Debug\net8.0\Meisy.API.sourcelink.json
+C:\Users\Victor\source\repos\Meisy\src\Meisy.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

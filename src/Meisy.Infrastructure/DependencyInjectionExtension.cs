@@ -9,11 +9,15 @@ using Meisy.Infrastructure.Data;
 using Meisy.Infrastructure.Data.Repositories.Company;
 using Meisy.Infrastructure.Data.Repositories.Input;
 using Meisy.Infrastructure.Data.Repositories.User;
+using Meisy.Infrastructure.Data.Repositories.Overhead;
 using Meisy.Infrastructure.Security.Cryptography;
 using Meisy.Infrastructure.Security.Token;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Meisy.Domain.Repositories.Overhead;
+using Meisy.Domain.Repositories.Products;
+using Meisy.Infrastructure.Data.Repositories.Product;
 
 namespace Meisy.Infrastructure
 {
@@ -49,7 +53,11 @@ namespace Meisy.Infrastructure
                 services.AddScoped<ICompanyWriteRepository, CompanyRepository>();
                 services.AddScoped<IInputReadOnlyRepository, InputRepository>();
                 services.AddScoped<IInputWriteOnlyRepository, InputRepository>();
-            }
+                services.AddScoped<IOverheadReadOnlyRepository, OverheadRepository>();
+                services.AddScoped<IOverheadWriteOnlyRepository, OverheadRepository>();
+                services.AddScoped<IProductReadOnlyRepository, ProductRepository>();
+                services.AddScoped<IProductWriteOnlyRepository, ProductRepository>();
+        }
 
             private static void AddToken(IServiceCollection services, IConfiguration configuration)
             {

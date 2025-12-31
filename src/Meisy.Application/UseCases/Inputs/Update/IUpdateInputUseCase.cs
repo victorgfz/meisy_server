@@ -4,6 +4,6 @@ namespace Meisy.Application.UseCases.Inputs.Update
 {
     public interface IUpdateInputUseCase
     {
-        Task Execute(int id, RequestInputJson request);
+        Task Execute(int id, RequestUpdateInputJson request);
     }
 }

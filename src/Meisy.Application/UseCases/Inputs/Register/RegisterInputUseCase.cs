@@ -31,7 +31,7 @@ namespace Meisy.Application.UseCases.Inputs.Register
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<ResponseInputJson> Execute(RequestInputJson request)
+        public async Task<ResponseInputJson> Execute(RequestRegisterInputJson request)
         {
             var companyId = _loggedUser.GetCompanyId();
             
@@ -47,9 +47,9 @@ namespace Meisy.Application.UseCases.Inputs.Register
             
         }
 
-        private void Validate(RequestInputJson request)
+        private void Validate(RequestRegisterInputJson request)
         {
-            var result = new InputValidator().Validate(request); ;
+            var result = new RegisterInputValidator().Validate(request); ;
             if (!result.IsValid)
             {
                 var errors = result.Errors.Select(e => e.ErrorMessage).ToList();

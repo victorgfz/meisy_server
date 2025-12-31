@@ -20,7 +20,7 @@ namespace Meisy.API.Controllers
         [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Register(
             [FromServices] IRegisterInputUseCase useCase,
-            [FromBody] RequestInputJson request
+            [FromBody] RequestRegisterInputJson request
             )
         {
             var response = await useCase.Execute(request);
@@ -48,7 +48,7 @@ namespace Meisy.API.Controllers
         [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Update(
             [FromRoute] int id,
-            [FromBody] RequestInputJson request,
+            [FromBody] RequestUpdateInputJson request,
             [FromServices] IUpdateInputUseCase useCase
             )
         {
