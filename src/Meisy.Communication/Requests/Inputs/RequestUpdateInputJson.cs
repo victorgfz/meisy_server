@@ -1,4 +1,4 @@
-﻿namespace Meisy.Communication.Requests
+﻿namespace Meisy.Communication.Requests.Inputs
 {
     public class RequestUpdateInputJson
     {

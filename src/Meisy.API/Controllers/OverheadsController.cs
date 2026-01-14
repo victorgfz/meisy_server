@@ -1,8 +1,9 @@
 ﻿using Meisy.Application.UseCases.Overheads.GetAll;
 using Meisy.Application.UseCases.Overheads.Register;
 using Meisy.Application.UseCases.Overheads.Update;
-using Meisy.Communication.Requests;
+using Meisy.Communication.Requests.Overheads;
 using Meisy.Communication.Responses;
+using Meisy.Communication.Responses.Overheads;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

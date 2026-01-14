@@ -1,4 +1,4 @@
-﻿using Meisy.Communication.Requests;
+﻿using Meisy.Communication.Requests.Inputs;
 
 namespace Meisy.Application.UseCases.Inputs.Update
 {

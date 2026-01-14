@@ -106,6 +106,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The product inputs cannot be empty!.
+        /// </summary>
+        public static string EMPTY_PRODUCT_INPUTS {
+            get {
+                return ResourceManager.GetString("EMPTY_PRODUCT_INPUTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This input was not found!.
         /// </summary>
         public static string INPUT_NOT_FOUND {
@@ -151,6 +160,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The input ID is invalid!.
+        /// </summary>
+        public static string INVALID_INPUT_ID {
+            get {
+                return ResourceManager.GetString("INVALID_INPUT_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The password is invalid!.
         /// </summary>
         public static string INVALID_PASSWORD {
@@ -160,11 +178,20 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This vlue for measurement unit is invalid!.
+        ///   Looks up a localized string similar to This value for measurement unit is invalid!.
         /// </summary>
         public static string INVALID_VALUE_FOR_MEASUREMENT_UNIT {
             get {
                 return ResourceManager.GetString("INVALID_VALUE_FOR_MEASUREMENT_UNIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This value for production measurement unit is invalid!.
+        /// </summary>
+        public static string INVALID_VALUE_FOR_PRODUCTION_MEASUREMENT_UNIT {
+            get {
+                return ResourceManager.GetString("INVALID_VALUE_FOR_PRODUCTION_MEASUREMENT_UNIT", resourceCulture);
             }
         }
         
@@ -201,6 +228,42 @@ namespace Meisy.Exception {
         public static string PRICE_LESS_THAN_ZERO {
             get {
                 return ResourceManager.GetString("PRICE_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This product was not found!.
+        /// </summary>
+        public static string PRODUCT_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("PRODUCT_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The production amount cannot be equal or less than zero!.
+        /// </summary>
+        public static string PRODUCTION_AMOUNT_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("PRODUCTION_AMOUNT_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The production time cannot be equal or less than zero!.
+        /// </summary>
+        public static string PRODUCTION_TIME_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("PRODUCTION_TIME_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The servings cannot be equal or less than zero!.
+        /// </summary>
+        public static string SERVINGS_LESS_THAN_ZERO {
+            get {
+                return ResourceManager.GetString("SERVINGS_LESS_THAN_ZERO", resourceCulture);
             }
         }
         

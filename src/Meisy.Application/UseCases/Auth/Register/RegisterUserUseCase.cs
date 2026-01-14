@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation.Results;
-using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+using Meisy.Communication.Requests.Auth;
+using Meisy.Communication.Responses.Auth;
 using Meisy.Domain.Entities;
 using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.Company;

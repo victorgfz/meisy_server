@@ -1,5 +1,5 @@
-﻿using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+﻿using Meisy.Communication.Requests.Inputs;
+using Meisy.Communication.Responses.Inputs;
 
 namespace Meisy.Application.UseCases.Inputs.Register
 {

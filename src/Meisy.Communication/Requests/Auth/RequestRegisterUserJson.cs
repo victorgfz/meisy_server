@@ -1,4 +1,4 @@
-﻿namespace Meisy.Communication.Requests
+﻿namespace Meisy.Communication.Requests.Auth
 {
     public class RequestRegisterUserJson
     {

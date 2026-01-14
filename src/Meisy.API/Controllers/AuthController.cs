@@ -1,7 +1,8 @@
 ﻿using Meisy.Application.UseCases.Auth.Login;
 using Meisy.Application.UseCases.Auth.Register;
-using Meisy.Communication.Requests;
+using Meisy.Communication.Requests.Auth;
 using Meisy.Communication.Responses;
+using Meisy.Communication.Responses.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Meisy.API.Controllers

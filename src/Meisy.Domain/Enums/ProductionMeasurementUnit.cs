@@ -9,7 +9,6 @@
         unit = 4,
         tsp  = 5, // colhe de chá
         tbscp = 6, // colher de sopa
-        cup = 7, // xícara
 
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Meisy.Application.UseCases.Inputs.Register;
-using Meisy.Communication.Requests;
 using Meisy.Communication.Responses;
 using Meisy.Communication.Enums;
 using Microsoft.AspNetCore.Authorization;
@@ -7,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Meisy.Application.UseCases.Inputs.GetAll;
 using Meisy.Application.UseCases.Inputs.Update;
 using Meisy.Application.UseCases.Inputs.Delete;
+using Meisy.Communication.Requests.Inputs;
+using Meisy.Communication.Responses.Inputs;
 
 namespace Meisy.API.Controllers
 {

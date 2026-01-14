@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Meisy.Communication.Responses;
+using Meisy.Communication.Responses.Inputs;
 using Meisy.Domain.Repositories.Input;
 using Meisy.Domain.Services.LoggedUser;
 

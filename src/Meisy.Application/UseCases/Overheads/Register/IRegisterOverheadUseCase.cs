@@ -1,5 +1,5 @@
-﻿using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+﻿using Meisy.Communication.Requests.Overheads;
+using Meisy.Communication.Responses.Overheads;
 
 namespace Meisy.Application.UseCases.Overheads.Register
 {

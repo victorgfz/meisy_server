@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+using Meisy.Communication.Requests.Overheads;
+using Meisy.Communication.Responses.Overheads;
 using Meisy.Domain.Entities;
 using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.Input;

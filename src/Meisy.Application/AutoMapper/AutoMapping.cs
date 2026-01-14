@@ -1,6 +1,11 @@
 ﻿using AutoMapper;
-using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+using Meisy.Communication.Requests.Auth;
+using Meisy.Communication.Requests.Inputs;
+using Meisy.Communication.Requests.Overheads;
+using Meisy.Communication.Requests.Products;
+using Meisy.Communication.Responses.Inputs;
+using Meisy.Communication.Responses.Overheads;
+using Meisy.Communication.Responses.Products;
 using Meisy.Domain.Entities;
 
 namespace Meisy.Application.AutoMapper
@@ -24,14 +29,28 @@ namespace Meisy.Application.AutoMapper
 
             CreateMap<RequestRegisterInputJson, Input>();
             CreateMap<RequestUpdateInputJson, Input>();
+
             CreateMap<RequestRegisterOverheadJson, Overhead>();
             CreateMap<RequestUpdateOverheadJson, Overhead>();
+
+            CreateMap<RequestRegisterProductJson, Product>();
+            CreateMap<RequestRegisterProductInputJson, ProductInput>();
+
+            CreateMap<RequestUpdateProductJson, Product>();
+
+
         }
 
         private void EntityToResponse()
         {
             CreateMap<Input, ResponseInputJson>();
             CreateMap<Overhead, ResponseOverheadJson>();
+            CreateMap<Product, ResponseProductJson>();
+
+            CreateMap<Product, ResponseDetailedProductJson>()
+                .ForMember(destination => destination.ProductInputs, opt => opt.Ignore())
+                .ForMember(destination => destination.ProductOverheads, opt => opt.Ignore());
+
 
         }
     }

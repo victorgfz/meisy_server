@@ -1,4 +1,4 @@
-﻿namespace Meisy.Communication.Responses
+﻿namespace Meisy.Communication.Responses.Auth
 {
     public class ResponseLoginJson
     {

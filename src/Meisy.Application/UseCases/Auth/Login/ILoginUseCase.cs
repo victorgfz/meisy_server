@@ -1,5 +1,5 @@
-﻿using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+﻿using Meisy.Communication.Requests.Auth;
+using Meisy.Communication.Responses.Auth;
 
 namespace Meisy.Application.UseCases.Auth.Login
 {

@@ -150,14 +150,14 @@
   <data name="PRICE_LESS_THAN_ZERO" xml:space="preserve">
     <value>The price cannot be equal or less than zero!</value>
   </data>
-  <data name="AMOUNT_LESS_THAN_ZERO" xml:space="preserve">
-    <value>The amount cannot be equal or less than zero!</value>
-  </data>
   <data name="INVALID_VALUE_FOR_TYPE" xml:space="preserve">
     <value>This value for type is invalid!</value>
   </data>
   <data name="INVALID_VALUE_FOR_MEASUREMENT_UNIT" xml:space="preserve">
-    <value>This vlue for measurement unit is invalid!</value>
+    <value>This value for measurement unit is invalid!</value>
+  </data>
+  <data name="INVALID_VALUE_FOR_PRODUCTION_MEASUREMENT_UNIT" xml:space="preserve">
+    <value>This value for production measurement unit is invalid!</value>
   </data>
   <data name="INVALID_DATE" xml:space="preserve">
     <value>The date is invalid!</value>
@@ -173,5 +173,26 @@
   </data>
   <data name="OVERHEAD_NOT_FOUND" xml:space="preserve">
     <value>This overhead was not found!</value>
+  </data>
+  <data name="PRODUCTION_TIME_LESS_THAN_ZERO" xml:space="preserve">
+    <value>The production time cannot be equal or less than zero!</value>
+  </data>
+  <data name="SERVINGS_LESS_THAN_ZERO" xml:space="preserve">
+    <value>The servings cannot be equal or less than zero!</value>
+  </data>
+  <data name="EMPTY_PRODUCT_INPUTS" xml:space="preserve">
+    <value>The product inputs cannot be empty!</value>
+  </data>
+  <data name="AMOUNT_LESS_THAN_ZERO" xml:space="preserve">
+    <value>The amount cannot be equal or less than zero!</value>
+  </data>
+  <data name="PRODUCTION_AMOUNT_LESS_THAN_ZERO" xml:space="preserve">
+    <value>The production amount cannot be equal or less than zero!</value>
+  </data>
+  <data name="INVALID_INPUT_ID" xml:space="preserve">
+    <value>The input ID is invalid!</value>
+  </data>
+  <data name="PRODUCT_NOT_FOUND" xml:space="preserve">
+    <value>This product was not found!</value>
   </data>
 </root>

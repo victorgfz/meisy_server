@@ -1,5 +1,5 @@
 ﻿using Meisy.Communication.Enums;
-using Meisy.Communication.Responses;
+using Meisy.Communication.Responses.Inputs;
 
 namespace Meisy.Application.UseCases.Inputs.GetAll
 {

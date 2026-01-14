@@ -1,4 +1,4 @@
-﻿using Meisy.Communication.Requests;
+﻿using Meisy.Communication.Requests.Overheads;
 
 namespace Meisy.Application.UseCases.Overheads.Update
 {

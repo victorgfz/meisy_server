@@ -11,7 +11,7 @@ namespace Meisy.Domain.Entities
 
         public TimeSpan ProductionTime { get; set; }
         public int Servings { get; set; }
-        public List<ProductInput> ProdutInputs { get; set; } = [];
+        public List<ProductInput> ProductInputs { get; set; } = [];
 
 
         public int CompanyId { get; set; }

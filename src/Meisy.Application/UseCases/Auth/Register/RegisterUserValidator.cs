@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using Meisy.Exception;
-using Meisy.Communication.Requests;
+using Meisy.Communication.Requests.Auth;
 
 namespace Meisy.Application.UseCases.Auth.Register
 {

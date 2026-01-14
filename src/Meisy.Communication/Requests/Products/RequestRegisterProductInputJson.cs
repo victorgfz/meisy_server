@@ -1,6 +1,6 @@
 ﻿using Meisy.Communication.Enums;
 
-namespace Meisy.Communication.Requests
+namespace Meisy.Communication.Requests.Products
 {
     public class RequestRegisterProductInputJson
     {

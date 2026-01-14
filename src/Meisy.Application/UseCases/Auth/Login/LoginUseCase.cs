@@ -1,5 +1,5 @@
-﻿using Meisy.Communication.Requests;
-using Meisy.Communication.Responses;
+﻿using Meisy.Communication.Requests.Auth;
+using Meisy.Communication.Responses.Auth;
 using Meisy.Domain.Repositories.User;
 using Meisy.Domain.Security.Cryptography;
 using Meisy.Domain.Security.Token;
@@ -28,12 +28,8 @@ namespace Meisy.Application.UseCases.Auth.Login
         public async Task<ResponseLoginJson> Execute(RequestLoginJson request)
         {
 
-            var user = await _userReadRepository.GetByEmail(request.Email);
-            if(user is null)
-            {
-                throw new InvalidLoginException();
-            }
-
+            var user = await _userReadRepository.GetByEmail(request.Email) ?? throw new InvalidLoginException(); ;
+           
             var passwordMatch = _bcrypt.Verify(request.Password, user.Password);
 
             if (!passwordMatch)

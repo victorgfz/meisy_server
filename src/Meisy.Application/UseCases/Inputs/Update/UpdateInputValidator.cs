@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Meisy.Communication.Requests;
+using Meisy.Communication.Requests.Inputs;
 using Meisy.Exception;
 
 namespace Meisy.Application.UseCases.Inputs.Update

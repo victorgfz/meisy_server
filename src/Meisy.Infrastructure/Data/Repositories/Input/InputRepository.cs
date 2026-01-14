@@ -30,10 +30,8 @@ namespace Meisy.Infrastructure.Data.Repositories.Input
             return await _dbContext.Inputs.FirstOrDefaultAsync(i => i.CompanyId == companyId && i.Id == inputId);
         }
 
-        public void Update(Domain.Entities.Input input)
-        {
-            _dbContext.Inputs.Update(input);
-        }
+        
+        
         public void Delete(Domain.Entities.Input input)
         {
             _dbContext.Inputs.Remove(input);

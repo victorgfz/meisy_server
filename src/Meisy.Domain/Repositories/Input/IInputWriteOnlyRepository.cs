@@ -4,6 +4,5 @@
     {
         Task Add(Domain.Entities.Input input); 
         void Delete(Domain.Entities.Input input); 
-        void Update(Domain.Entities.Input input);
     }
 }

@@ -23,7 +23,7 @@ namespace Meisy.Infrastructure.Data
                 entity.HasKey(e => new { e.ProductId, e.InputId });
 
                 entity.HasOne(e => e.Product)
-                      .WithMany(e => e.ProdutInputs)
+                      .WithMany(e => e.ProductInputs)
                       .HasForeignKey(e => e.ProductId);
 
                 entity.HasOne(e => e.Input)

@@ -26,7 +26,7 @@ namespace Meisy.Infrastructure.Data.Repositories.Overhead
 
         public async Task<List<Domain.Entities.Overhead>> GetAll(int companyId)
         {
-            return await _dbContext.Overheads.Where(o => o.CompanyId == companyId).ToListAsync();
+            return await _dbContext.Overheads.AsNoTracking().Where(o => o.CompanyId == companyId).ToListAsync();
         }
 
         public async Task<Domain.Entities.Overhead?> GetById(int companyId, int overheadId)
@@ -34,10 +34,7 @@ namespace Meisy.Infrastructure.Data.Repositories.Overhead
             return await _dbContext.Overheads.FirstOrDefaultAsync(o => o.CompanyId == companyId && o.Id == overheadId);
         }
 
-        public void Update(Domain.Entities.Overhead overhead)
-        {
-            _dbContext.Overheads.Update(overhead);
-        }
+        
 
     }
 }

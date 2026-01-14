@@ -34,12 +34,8 @@ namespace Meisy.Application.UseCases.Inputs.Delete
         public async Task Execute(int id)
         {
             var companyId = _loggedUser.GetCompanyId();
-            var input = await _inputReadRepository.GetById(companyId, id);
+            var input = await _inputReadRepository.GetById(companyId, id) ?? throw new NotFoundException(ResourceErrorMessages.INPUT_NOT_FOUND);
 
-            if (input is null)
-            {
-                throw new NotFoundException(ResourceErrorMessages.INPUT_NOT_FOUND);
-            }
             _inputWriteRepository.Delete(input);
             await _unitOfWork.Commit();
 
