@@ -1,10 +1,17 @@
 ﻿using Meisy.Application.AutoMapper;
 using Meisy.Application.UseCases.Auth.Login;
 using Meisy.Application.UseCases.Auth.Register;
+using Meisy.Application.UseCases.Clients.Delete;
+using Meisy.Application.UseCases.Clients.GetAll;
+using Meisy.Application.UseCases.Clients.Register;
+using Meisy.Application.UseCases.Clients.Update;
 using Meisy.Application.UseCases.Inputs.Delete;
 using Meisy.Application.UseCases.Inputs.GetAll;
 using Meisy.Application.UseCases.Inputs.Register;
 using Meisy.Application.UseCases.Inputs.Update;
+using Meisy.Application.UseCases.Orders.GetAll;
+using Meisy.Application.UseCases.Orders.Register;
+using Meisy.Application.UseCases.Orders.Update;
 using Meisy.Application.UseCases.Overheads.GetAll;
 using Meisy.Application.UseCases.Overheads.Register;
 using Meisy.Application.UseCases.Overheads.Update;
@@ -46,7 +53,17 @@ namespace Meisy.Application
             services.AddScoped<IUpdateProductUseCase, UpdateProductUseCase>();
             services.AddScoped<IDeleteProductUseCase, DeleteProductUseCase>();
 
-            
+            services.AddScoped<IRegisterClientUseCase, RegisterClientUseCase>();
+            services.AddScoped<IGetAllClientUseCase, GetAllClientUseCase>();
+            services.AddScoped<IUpdateClientUseCase, UpdateClientUseCase>();
+            services.AddScoped<IDeleteClientUseCase, DeleteClientUseCase>();
+
+            services.AddScoped<IRegisterOrderUseCase, RegisterOrderUseCase>();
+            services.AddScoped<IGetAllOrderUseCase, GetAllOrderUseCase>();
+            services.AddScoped<IUpdateOrderStatusUseCase, UpdateOrderStatusUseCase>();
+            services.AddScoped<ICancelOrderStatusUseCase, CancelOrderStatusUseCase>();
+
+
         }
     }
 }

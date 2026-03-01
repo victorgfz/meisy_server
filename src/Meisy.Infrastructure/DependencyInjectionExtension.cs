@@ -16,8 +16,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Meisy.Domain.Repositories.Overhead;
-using Meisy.Domain.Repositories.Products;
+using Meisy.Domain.Repositories.Product;
 using Meisy.Infrastructure.Data.Repositories.Product;
+using Meisy.Domain.Repositories.Client;
+using Meisy.Infrastructure.Data.Repositories.Client;
+using Meisy.Domain.Repositories.Order;
+using Meisy.Infrastructure.Data.Repositories.Order;
 
 namespace Meisy.Infrastructure
 {
@@ -57,9 +61,13 @@ namespace Meisy.Infrastructure
                 services.AddScoped<IOverheadWriteOnlyRepository, OverheadRepository>();
                 services.AddScoped<IProductReadOnlyRepository, ProductRepository>();
                 services.AddScoped<IProductWriteOnlyRepository, ProductRepository>();
-        }
+                services.AddScoped<IClientReadOnlyRepository, ClientRepository>();
+                services.AddScoped<IClientWriteOnlyRepository, ClientRepository>();
+                services.AddScoped<IOrderReadOnlyRepository, OrderRepository>();
+                services.AddScoped<IOrderWriteOnlyRepository, OrderRepository>();
+            }
 
-            private static void AddToken(IServiceCollection services, IConfiguration configuration)
+        private static void AddToken(IServiceCollection services, IConfiguration configuration)
             {
             var expirationTimeMinutes = uint.Parse(configuration["Settings:Jwt:ExpiresMinutes"]!);
             var signingKey = configuration["Settings:Jwt:SigningKey"];

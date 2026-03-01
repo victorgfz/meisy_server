@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Meisy.Communication.Responses.Products;
-using Meisy.Domain.Repositories;
-using Meisy.Domain.Repositories.Input;
-using Meisy.Domain.Repositories.Products;
+using Meisy.Domain.Repositories.Product;
 using Meisy.Domain.Services.LoggedUser;
 
 namespace Meisy.Application.UseCases.Products.GetAll

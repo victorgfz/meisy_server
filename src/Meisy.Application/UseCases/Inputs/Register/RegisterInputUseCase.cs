@@ -40,7 +40,7 @@ namespace Meisy.Application.UseCases.Inputs.Register
             var entityInput = _mapper.Map<Input>(request);
             entityInput.CompanyId = companyId;
 
-             await _inputWriteRepository.Add(entityInput);
+            await _inputWriteRepository.Add(entityInput);
             await _unitOfWork.Commit();
 
             return _mapper.Map<ResponseInputJson>(entityInput);

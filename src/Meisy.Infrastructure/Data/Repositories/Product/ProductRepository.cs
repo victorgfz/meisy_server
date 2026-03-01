@@ -1,5 +1,5 @@
 ﻿using Meisy.Domain.Entities;
-using Meisy.Domain.Repositories.Products;
+using Meisy.Domain.Repositories.Product;
 using Microsoft.EntityFrameworkCore;
 
 namespace Meisy.Infrastructure.Data.Repositories.Product
@@ -56,10 +56,9 @@ namespace Meisy.Infrastructure.Data.Repositories.Product
             }
         }
 
-        
-
-        
-
-        
+        public async Task<bool> IsProductBeingUsed(int companyId, int productId)
+        {
+            return await _dbContext.Order_Products.AnyAsync(op => op.ProductId == productId && op.CompanyId == companyId);
+        }
     }
 }

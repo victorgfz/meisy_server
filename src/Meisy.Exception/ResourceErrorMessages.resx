@@ -195,4 +195,34 @@
   <data name="PRODUCT_NOT_FOUND" xml:space="preserve">
     <value>This product was not found!</value>
   </data>
+  <data name="INPUT_BEING_USED" xml:space="preserve">
+    <value>This input cannot be deleted!</value>
+  </data>
+  <data name="INVALID_PHONE" xml:space="preserve">
+    <value>The phone is invalid!</value>
+  </data>
+  <data name="CLIENT_NOT_FOUND" xml:space="preserve">
+    <value>This client was not found!</value>
+  </data>
+  <data name="INVALID_CLIENT_ID" xml:space="preserve">
+    <value>The client ID is invalid!</value>
+  </data>
+  <data name="INVALID_PRODUCT_ID" xml:space="preserve">
+    <value>The product ID is invalid!</value>
+  </data>
+  <data name="USER_NOT_FOUND" xml:space="preserve">
+    <value>This user was not found!</value>
+  </data>
+  <data name="ORDER_NOT_FOUND" xml:space="preserve">
+    <value>This order was not found!</value>
+  </data>
+  <data name="INVALID_VALUE_FOR_STATUS" xml:space="preserve">
+    <value>This value for order status is invalid!</value>
+  </data>
+  <data name="ORDER_STATUS_COMPLETED" xml:space="preserve">
+    <value>This order has already been completed or cancelled!</value>
+  </data>
+  <data name="PRODUCT_BEING_USED" xml:space="preserve">
+    <value>This product cannot be deleted!</value>
+  </data>
 </root>

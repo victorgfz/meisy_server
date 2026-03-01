@@ -28,5 +28,11 @@ namespace Meisy.Infrastructure.Data.Repositories.User
         {
             return await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Email.Equals(email));
         }
+
+        public async Task<Domain.Entities.User?> GetById(int companyId, int userId)
+        {
+            return await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Id == userId && user.CompanyId == companyId);
+
+        }
     }
 }

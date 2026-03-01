@@ -12,7 +12,9 @@ namespace Meisy.Infrastructure.Data
         public DbSet<Overhead> Overheads { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductInput> Product_Inputs { get; set; }
-
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> Order_Products { get; set; }
+        public DbSet<Client> Clients { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +31,19 @@ namespace Meisy.Infrastructure.Data
                 entity.HasOne(e => e.Input)
                       .WithMany()
                       .HasForeignKey(e => e.InputId);
+            });
+
+            modelBuilder.Entity<OrderProduct>(entity =>
+            {
+                entity.HasKey(e => new { e.ProductId, e.OrderId });
+
+                entity.HasOne(e => e.Order)
+                      .WithMany(e => e.OrderProducts)
+                      .HasForeignKey(e => e.OrderId);
+
+                entity.HasOne(e => e.Product)
+                      .WithMany()
+                      .HasForeignKey(e => e.ProductId);
             });
         }
 

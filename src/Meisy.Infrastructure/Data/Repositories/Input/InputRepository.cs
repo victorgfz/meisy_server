@@ -36,5 +36,10 @@ namespace Meisy.Infrastructure.Data.Repositories.Input
         {
             _dbContext.Inputs.Remove(input);
         }
+
+        public async Task<bool> IsInputBeingUsed(int companyId, int inputId)
+        {
+            return await _dbContext.Product_Inputs.AnyAsync(pi => pi.InputId == inputId && pi.CompanyId == companyId);
+        }
     }
 }

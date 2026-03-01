@@ -42,7 +42,7 @@ namespace Meisy.Application.UseCases.Overheads.Register
             var overheadExists = await _overheadReadRepository.OverheadExists((Domain.Enums.OverheadType)request.Type, companyId);
             if (overheadExists)
             {
-                throw new OverheadLimitExceededException(ResourceErrorMessages.OVERHEAD_LIMIT_EXCEEDED);
+                throw new BusinessRuleException(ResourceErrorMessages.OVERHEAD_LIMIT_EXCEEDED);
             }
             var entityOverhead = _mapper.Map<Overhead>(request);
             entityOverhead.CompanyId = companyId;

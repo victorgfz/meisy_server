@@ -70,6 +70,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This client was not found!.
+        /// </summary>
+        public static string CLIENT_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("CLIENT_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The cost per hour cannot be less than zero!.
         /// </summary>
         public static string COST_LESS_THAN_ZERO {
@@ -115,11 +124,29 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This input cannot be deleted!.
+        /// </summary>
+        public static string INPUT_BEING_USED {
+            get {
+                return ResourceManager.GetString("INPUT_BEING_USED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This input was not found!.
         /// </summary>
         public static string INPUT_NOT_FOUND {
             get {
                 return ResourceManager.GetString("INPUT_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The client ID is invalid!.
+        /// </summary>
+        public static string INVALID_CLIENT_ID {
+            get {
+                return ResourceManager.GetString("INVALID_CLIENT_ID", resourceCulture);
             }
         }
         
@@ -178,6 +205,24 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The phone is invalid!.
+        /// </summary>
+        public static string INVALID_PHONE {
+            get {
+                return ResourceManager.GetString("INVALID_PHONE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The product ID is invalid!.
+        /// </summary>
+        public static string INVALID_PRODUCT_ID {
+            get {
+                return ResourceManager.GetString("INVALID_PRODUCT_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This value for measurement unit is invalid!.
         /// </summary>
         public static string INVALID_VALUE_FOR_MEASUREMENT_UNIT {
@@ -196,11 +241,38 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This value for order status is invalid!.
+        /// </summary>
+        public static string INVALID_VALUE_FOR_STATUS {
+            get {
+                return ResourceManager.GetString("INVALID_VALUE_FOR_STATUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This value for type is invalid!.
         /// </summary>
         public static string INVALID_VALUE_FOR_TYPE {
             get {
                 return ResourceManager.GetString("INVALID_VALUE_FOR_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This order was not found!.
+        /// </summary>
+        public static string ORDER_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("ORDER_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This order has already been completed or cancelled!.
+        /// </summary>
+        public static string ORDER_STATUS_COMPLETED {
+            get {
+                return ResourceManager.GetString("ORDER_STATUS_COMPLETED", resourceCulture);
             }
         }
         
@@ -228,6 +300,15 @@ namespace Meisy.Exception {
         public static string PRICE_LESS_THAN_ZERO {
             get {
                 return ResourceManager.GetString("PRICE_LESS_THAN_ZERO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This product cannot be deleted!.
+        /// </summary>
+        public static string PRODUCT_BEING_USED {
+            get {
+                return ResourceManager.GetString("PRODUCT_BEING_USED", resourceCulture);
             }
         }
         
@@ -291,6 +372,15 @@ namespace Meisy.Exception {
         public static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This user was not found!.
+        /// </summary>
+        public static string USER_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("USER_NOT_FOUND", resourceCulture);
             }
         }
     }

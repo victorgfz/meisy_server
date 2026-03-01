@@ -36,6 +36,13 @@ namespace Meisy.Application.UseCases.Inputs.Delete
             var companyId = _loggedUser.GetCompanyId();
             var input = await _inputReadRepository.GetById(companyId, id) ?? throw new NotFoundException(ResourceErrorMessages.INPUT_NOT_FOUND);
 
+            var isInputBeingUsed = await _inputReadRepository.IsInputBeingUsed(companyId, id);
+
+            if (isInputBeingUsed)
+            {
+                throw new BusinessRuleException(ResourceErrorMessages.INPUT_BEING_USED);
+            }
+
             _inputWriteRepository.Delete(input);
             await _unitOfWork.Commit();
 

@@ -6,5 +6,6 @@ namespace Meisy.Domain.Repositories.Input
     {
         Task<List<Domain.Entities.Input>> GetAllByType(int companyId, InputType type);
         Task<Domain.Entities.Input?> GetById(int companyId, int inputId);
+        Task<bool> IsInputBeingUsed(int companyId, int inputId);
     }
 }

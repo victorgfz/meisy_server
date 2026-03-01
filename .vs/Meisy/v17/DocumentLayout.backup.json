@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Victor\\source\\repos\\Meisy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\products\\delete\\deleteproductusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\products\\delete\\deleteproductusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\dependencyinjectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.infrastructure\\data\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|solutionrelative:src\\meisy.infrastructure\\data\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\orders\\update\\updateorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\orders\\update\\updateorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D45423A5-5B12-45AC-8D86-E559A0F70169}|src\\Meisy.Domain\\Meisy.Domain.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.domain\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D45423A5-5B12-45AC-8D86-E559A0F70169}|src\\Meisy.Domain\\Meisy.Domain.csproj|solutionrelative:src\\meisy.domain\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\orders\\update\\iupdateorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\orders\\update\\iupdateorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\orders\\update\\icancelorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\orders\\update\\icancelorderstatususecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA8409C-0AC2-4270-BFDF-9610034E122A}|src\\Meisy.Exception\\Meisy.Exception.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.exception\\resourceerrormessages.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{BFA8409C-0AC2-4270-BFDF-9610034E122A}|src\\Meisy.Exception\\Meisy.Exception.csproj|solutionrelative:src\\meisy.exception\\resourceerrormessages.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Infrastructure\\Data\\Repositories\\Product\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "src\\Meisy.Infrastructure\\Data\\Repositories\\Product\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Infrastructure\\Data\\Repositories\\Product\\ProductRepository.cs",
-              "RelativeToolTip": "src\\Meisy.Infrastructure\\Data\\Repositories\\Product\\ProductRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAIA2wC8AAAAwAAAAAAAAAA==",
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.API\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "src\\Meisy.API\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwC0AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T00:29:39.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteProductUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Products\\Delete\\DeleteProductUseCase.cs",
-              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Products\\Delete\\DeleteProductUseCase.cs",
-              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Products\\Delete\\DeleteProductUseCase.cs",
-              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Products\\Delete\\DeleteProductUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T00:28:53.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T21:42:56.881Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Meisy.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Program.cs",
-              "RelativeToolTip": "src\\Meisy.API\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "UpdateOrderStatusUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\UpdateOrderStatusUseCase.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Orders\\Update\\UpdateOrderStatusUseCase.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\UpdateOrderStatusUseCase.cs",
+              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Orders\\Update\\UpdateOrderStatusUseCase.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T00:07:36.549Z",
+              "WhenOpened": "2026-02-09T00:28:58.875Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Domain\\Enums\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Domain\\Enums\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Domain\\Enums\\OrderStatus.cs",
+              "RelativeToolTip": "src\\Meisy.Domain\\Enums\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T00:37:10.878Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjectionExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\DependencyInjectionExtension.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\DependencyInjectionExtension.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\DependencyInjectionExtension.cs*",
+              "RelativeToolTip": "src\\Meisy.Application\\DependencyInjectionExtension.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAD0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T01:03:08.762Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICancelOrderStatusUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\ICancelOrderStatusUseCase.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Orders\\Update\\ICancelOrderStatusUseCase.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\ICancelOrderStatusUseCase.cs",
+              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Orders\\Update\\ICancelOrderStatusUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T00:56:10.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResourceErrorMessages.resx",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Exception\\ResourceErrorMessages.resx",
+              "RelativeDocumentMoniker": "src\\Meisy.Exception\\ResourceErrorMessages.resx",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Exception\\ResourceErrorMessages.resx",
+              "RelativeToolTip": "src\\Meisy.Exception\\ResourceErrorMessages.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-02-10T00:44:27.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUpdateOrderStatusUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\IUpdateOrderStatusUseCase.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Orders\\Update\\IUpdateOrderStatusUseCase.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Orders\\Update\\IUpdateOrderStatusUseCase.cs",
+              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Orders\\Update\\IUpdateOrderStatusUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T23:56:00.716Z"
             }
           ]
         }

@@ -4,7 +4,7 @@ using Meisy.Communication.Responses.Products;
 using Meisy.Domain.Entities;
 using Meisy.Domain.Enums;
 using Meisy.Domain.Repositories.Overhead;
-using Meisy.Domain.Repositories.Products;
+using Meisy.Domain.Repositories.Product;
 using Meisy.Domain.Services.LoggedUser;
 using Meisy.Exception;
 using Meisy.Exception.ExceptionBase;

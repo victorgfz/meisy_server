@@ -1,4 +1,4 @@
-﻿namespace Meisy.Domain.Repositories.Products
+﻿namespace Meisy.Domain.Repositories.Product
 {
     public interface IProductWriteOnlyRepository
     {

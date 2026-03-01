@@ -1,5 +1,5 @@
 ﻿using Meisy.Domain.Repositories;
-using Meisy.Domain.Repositories.Products;
+using Meisy.Domain.Repositories.Product;
 using Meisy.Domain.Services.LoggedUser;
 using Meisy.Exception;
 using Meisy.Exception.ExceptionBase;
@@ -32,6 +32,10 @@ namespace Meisy.Application.UseCases.Products.Delete
         {
             var companyId = _loggedUser.GetCompanyId();
             var product = await _productReadRepository.GetByIdForUpdate(companyId, id) ?? throw new NotFoundException(ResourceErrorMessages.PRODUCT_NOT_FOUND);
+
+            var isProductBeingUsed = await _productReadRepository.IsProductBeingUsed(companyId, id);
+            if (isProductBeingUsed) throw new BusinessRuleException(ResourceErrorMessages.PRODUCT_BEING_USED);
+
             _productWriteRepository.Delete(product);
             await _unitOfWork.Commit();
 

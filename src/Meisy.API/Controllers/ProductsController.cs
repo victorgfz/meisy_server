@@ -73,6 +73,7 @@ namespace Meisy.API.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Delete(
             [FromServices] IDeleteProductUseCase useCase,
             [FromRoute] int id

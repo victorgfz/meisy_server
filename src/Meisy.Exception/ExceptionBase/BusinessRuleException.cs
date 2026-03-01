@@ -3,9 +3,9 @@ using System.Net;
 
 namespace Meisy.Exception.ExceptionBase
 {
-    public class OverheadLimitExceededException : MeisyException
+    public class BusinessRuleException : MeisyException
     {
-        public OverheadLimitExceededException(string message) : base(message)
+        public BusinessRuleException(string message) : base(message)
         {
 
         }
