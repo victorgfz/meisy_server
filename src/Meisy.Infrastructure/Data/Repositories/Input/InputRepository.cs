@@ -20,9 +20,9 @@ namespace Meisy.Infrastructure.Data.Repositories.Input
 
         
 
-        public async Task<List<Domain.Entities.Input>> GetAllByType(int companyId, InputType type)
+        public async Task<List<Domain.Entities.Input>> GetAll(int companyId)
         {
-            return await _dbContext.Inputs.AsNoTracking().Where(i => i.CompanyId == companyId && i.Type == type).ToListAsync();
+            return await _dbContext.Inputs.AsNoTracking().Where(i => i.CompanyId == companyId).ToListAsync();
         }
 
         public async Task<Domain.Entities.Input?> GetById(int companyId, int inputId)

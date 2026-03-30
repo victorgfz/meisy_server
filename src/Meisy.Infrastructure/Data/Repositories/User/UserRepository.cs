@@ -26,7 +26,7 @@ namespace Meisy.Infrastructure.Data.Repositories.User
 
         public async Task<Domain.Entities.User?> GetByEmail(string email)
         {
-            return await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Email.Equals(email));
+            return await _dbContext.Users.AsNoTracking().Include(u => u.Company).FirstOrDefaultAsync(user => user.Email.Equals(email));
         }
 
         public async Task<Domain.Entities.User?> GetById(int companyId, int userId)

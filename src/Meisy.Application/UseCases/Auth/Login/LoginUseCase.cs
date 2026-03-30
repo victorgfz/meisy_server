@@ -41,6 +41,7 @@ namespace Meisy.Application.UseCases.Auth.Login
             return new ResponseLoginJson
             {
                 Name = user.Name,
+                CompanyCode = user.Company.Code,
                 Token = _tokenGenerator.GenerateToken(user)
             };
         }

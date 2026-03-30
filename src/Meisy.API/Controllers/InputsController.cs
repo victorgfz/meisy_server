@@ -34,10 +34,9 @@ namespace Meisy.API.Controllers
         [ProducesResponseType(typeof(List<ResponseInputJson>), StatusCodes.Status200OK)]
         [ProducesResponseType( StatusCodes.Status204NoContent)]
         public async Task<IActionResult> GetAll(
-            [FromQuery]InputType type,
             [FromServices] IGetAllInputUseCase useCase)
         {
-            var response = await useCase.Execute(type);
+            var response = await useCase.Execute();
             if (response.Count != 0) return Ok(response);
             return NoContent();
         }

@@ -247,13 +247,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "type",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Meisy.Communication.Responses.Inputs.ResponseInputJson, Meisy.Communication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -344,6 +338,15 @@
           "text/json"
         ],
         "StatusCode": 404
+      },
+      {
+        "Type": "Meisy.Communication.Responses.ResponseErrorJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 409
       }
     ]
   },
@@ -778,6 +781,15 @@
           "text/json"
         ],
         "StatusCode": 404
+      },
+      {
+        "Type": "Meisy.Communication.Responses.ResponseErrorJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 409
       }
     ]
   }

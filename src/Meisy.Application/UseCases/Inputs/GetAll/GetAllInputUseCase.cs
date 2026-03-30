@@ -24,11 +24,11 @@ namespace Meisy.Application.UseCases.Inputs.GetAll
 
 
 
-        public async Task<List<ResponseInputJson>> Execute(Communication.Enums.InputType type)
+        public async Task<List<ResponseInputJson>> Execute()
         {
             var companyId = _loggedUser.GetCompanyId();
             
-            var result = await _inputReadRepository.GetAllByType(companyId, (Domain.Enums.InputType)type);
+            var result = await _inputReadRepository.GetAll(companyId);
             return _mapper.Map<List<ResponseInputJson>>(result);
         }
     }
