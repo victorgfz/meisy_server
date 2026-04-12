@@ -1858,6 +1858,14 @@
             "type": "number",
             "format": "double"
           },
+          "productionTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "servings": {
+            "type": "integer",
+            "format": "int32"
+          },
           "measurementUnit": {
             "$ref": "#/components/schemas/MeasurementUnit"
           },

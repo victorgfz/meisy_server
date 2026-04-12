@@ -61,7 +61,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The amount cannot be equal or less than zero!.
+        ///   Looks up a localized string similar to A quantidade não pode ser igual ou menor que zero!.
         /// </summary>
         public static string AMOUNT_LESS_THAN_ZERO {
             get {
@@ -70,7 +70,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This client was not found!.
+        ///   Looks up a localized string similar to Este cliente não foi encontrado!.
         /// </summary>
         public static string CLIENT_NOT_FOUND {
             get {
@@ -79,7 +79,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The cost per hour cannot be less than zero!.
+        ///   Looks up a localized string similar to O custo por hora não pode ser igual ou menor que zero!.
         /// </summary>
         public static string COST_LESS_THAN_ZERO {
             get {
@@ -88,7 +88,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The description cannot be empty!.
+        ///   Looks up a localized string similar to A description não pode ficar vazia!.
         /// </summary>
         public static string EMPTY_DESCRIPTION {
             get {
@@ -97,7 +97,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email cannot be empty!.
+        ///   Looks up a localized string similar to O email não pode ficar vazio!.
         /// </summary>
         public static string EMPTY_EMAIL {
             get {
@@ -106,7 +106,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The name cannot be empty!.
+        ///   Looks up a localized string similar to O nome não pode ficar vazio!.
         /// </summary>
         public static string EMPTY_NAME {
             get {
@@ -115,7 +115,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The product inputs cannot be empty!.
+        ///   Looks up a localized string similar to Os insumos do produto não podem ficar vazios!.
         /// </summary>
         public static string EMPTY_PRODUCT_INPUTS {
             get {
@@ -124,7 +124,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This input cannot be deleted!.
+        ///   Looks up a localized string similar to Este insumo não pode ser deletado!.
         /// </summary>
         public static string INPUT_BEING_USED {
             get {
@@ -133,7 +133,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This input was not found!.
+        ///   Looks up a localized string similar to Este insumo não foi encontrado!.
         /// </summary>
         public static string INPUT_NOT_FOUND {
             get {
@@ -142,7 +142,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The client ID is invalid!.
+        ///   Looks up a localized string similar to O ID do cliente não é válido!.
         /// </summary>
         public static string INVALID_CLIENT_ID {
             get {
@@ -151,7 +151,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The company ID is invalid!.
+        ///   Looks up a localized string similar to O ID da empresa não é válido!.
         /// </summary>
         public static string INVALID_COMPANY_ID {
             get {
@@ -160,7 +160,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email and/or password incorrect!.
+        ///   Looks up a localized string similar to Email e/ou senha incorretos!.
         /// </summary>
         public static string INVALID_CREDENTIALS {
             get {
@@ -169,7 +169,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The date is invalid!.
+        ///   Looks up a localized string similar to A data não é válida!.
         /// </summary>
         public static string INVALID_DATE {
             get {
@@ -178,7 +178,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email is invalid!.
+        ///   Looks up a localized string similar to O email não é válido!.
         /// </summary>
         public static string INVALID_EMAIL {
             get {
@@ -187,7 +187,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The input ID is invalid!.
+        ///   Looks up a localized string similar to O ID do insumo não é válido!.
         /// </summary>
         public static string INVALID_INPUT_ID {
             get {
@@ -196,7 +196,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password is invalid!.
+        ///   Looks up a localized string similar to A senha não é válida!.
         /// </summary>
         public static string INVALID_PASSWORD {
             get {
@@ -205,7 +205,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The phone is invalid!.
+        ///   Looks up a localized string similar to O telefone não é válido!.
         /// </summary>
         public static string INVALID_PHONE {
             get {
@@ -214,7 +214,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The product ID is invalid!.
+        ///   Looks up a localized string similar to O ID do produto não é válido!.
         /// </summary>
         public static string INVALID_PRODUCT_ID {
             get {
@@ -223,7 +223,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This value for measurement unit is invalid!.
+        ///   Looks up a localized string similar to Este valor para unidade de medida não é válido!.
         /// </summary>
         public static string INVALID_VALUE_FOR_MEASUREMENT_UNIT {
             get {
@@ -232,7 +232,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This value for production measurement unit is invalid!.
+        ///   Looks up a localized string similar to Este valor para unidade de medida de produção não é válido!.
         /// </summary>
         public static string INVALID_VALUE_FOR_PRODUCTION_MEASUREMENT_UNIT {
             get {

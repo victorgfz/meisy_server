@@ -16,5 +16,9 @@ namespace Meisy.Application.UseCases.Inputs.Register
             RuleFor(input => input.CreatedAt).LessThanOrEqualTo(DateTime.UtcNow).WithMessage(ResourceErrorMessages.INVALID_DATE);
             RuleFor(input => input.UpdatedAt).LessThanOrEqualTo(DateTime.UtcNow).WithMessage(ResourceErrorMessages.INVALID_DATE);
         }
+
+
+
+    
     }
 }

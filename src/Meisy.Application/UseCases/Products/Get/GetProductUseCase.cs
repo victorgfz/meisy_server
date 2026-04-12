@@ -40,7 +40,7 @@ namespace Meisy.Application.UseCases.Products.Get
             AddProductInputs(product, entityProduct);
 
             var overheads =  await _overheadReadRepository.GetAll(companyId);
-            AddProductOverheads(overheads, entityProduct, (decimal)product.ProductionTime.TotalHours);
+            AddProductOverheads(overheads, entityProduct, (decimal)product.ProductionTime.TotalHours, product.Servings);
            
             return entityProduct;
         }
@@ -92,7 +92,7 @@ namespace Meisy.Application.UseCases.Products.Get
             }
         }
 
-        private void AddProductOverheads(List<Overhead> overheads, ResponseDetailedProductJson entity, decimal productionTime)
+        private void AddProductOverheads(List<Overhead> overheads, ResponseDetailedProductJson entity, decimal productionTime, int servings)
         {
             foreach(var item in overheads)
             {
@@ -100,7 +100,7 @@ namespace Meisy.Application.UseCases.Products.Get
                 {
                     Id = item.Id,
                     Type = (Communication.Enums.OverheadType)item.Type,
-                    TotalCost = productionTime * item.CostPerHour
+                    TotalCost = productionTime * item.CostPerHour / servings
                 });
             }
         }
