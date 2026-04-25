@@ -45,8 +45,11 @@ namespace Meisy.Application.UseCases.Orders.GetAll
            for(var i =0; i < orders.Count; i++)
             {
                 var seller = await _userReadRepository.GetById(companyId, orders[i].SellerId) ?? throw new NotFoundException(ResourceErrorMessages.USER_NOT_FOUND);
-                var client = await _clientReadRepository.GetById(companyId, orders[i].ClientId) ?? throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND);
-                result[i].Client = _mapper.Map<ResponseOrderUserJson>(client);
+                var clientId = orders[i].ClientId;
+
+                var client = clientId is null ? null : (await _clientReadRepository.GetById(companyId, clientId.Value) ??
+                    throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND));
+                result[i].Client = client is null ? null :  _mapper.Map<ResponseOrderUserJson>(client);
                 result[i].Seller = _mapper.Map<ResponseOrderUserJson>(seller);
 
                 List<ResponseOrderProductJson> products = [];

@@ -44,9 +44,14 @@ namespace Meisy.Application.UseCases.Orders.Register
             var companyId = _loggedUser.GetCompanyId();
             var userId = _loggedUser.GetUserId();
             Validate(request);
-            var client = await _clientReadRepository.GetById(companyId, request.ClientId) ?? throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND);
+
+            var clientId = request.ClientId;
+
+            var client = clientId is null ? null : (await _clientReadRepository.GetById(companyId, clientId.Value)
+                         ?? throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND)) ;
 
             var entityOrder = _mapper.Map<Order>(request);
+
 
             entityOrder.CompanyId = companyId;
             entityOrder.SellerId = userId;

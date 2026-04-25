@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meisy.Exception")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30a5b76d6349842c06411229c441583cd3e75f5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ab8e7ed233837553de6f9aad4f8bce2b51226cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meisy.Exception")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meisy.Exception")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

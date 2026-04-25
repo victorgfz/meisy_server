@@ -13,8 +13,8 @@ namespace Meisy.Domain.Entities
         public int SellerId { get; set; }
         public User Seller { get; set; } = default!;
 
-        public int ClientId { get; set; }
-        public Client Client { get; set; } = default!;
+        public int? ClientId { get; set; }
+        public Client? Client { get; set; } = default!;
 
         public List<OrderProduct> OrderProducts { get; set; } = [];
     

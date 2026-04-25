@@ -12,7 +12,7 @@ namespace Meisy.Communication.Responses.Orders
 
         public ResponseOrderUserJson Seller { get; set; } = default!;
 
-        public ResponseOrderUserJson Client { get; set; } = default!;
+        public ResponseOrderUserJson? Client { get; set; } = default!;
 
         public List<ResponseOrderProductJson> OrderProducts { get; set; } = [];
 

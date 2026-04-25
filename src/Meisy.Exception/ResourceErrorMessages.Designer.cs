@@ -241,7 +241,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This value for order status is invalid!.
+        ///   Looks up a localized string similar to Este valor para status não é válido!.
         /// </summary>
         public static string INVALID_VALUE_FOR_STATUS {
             get {
@@ -250,7 +250,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This value for type is invalid!.
+        ///   Looks up a localized string similar to Este valor para o tipo não é válido!.
         /// </summary>
         public static string INVALID_VALUE_FOR_TYPE {
             get {
@@ -259,7 +259,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This order was not found!.
+        ///   Looks up a localized string similar to Este pedido não foi encontrado!.
         /// </summary>
         public static string ORDER_NOT_FOUND {
             get {
@@ -268,7 +268,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This order has already been completed or cancelled!.
+        ///   Looks up a localized string similar to Este pedido já foi cancelado ou finalizado!.
         /// </summary>
         public static string ORDER_STATUS_COMPLETED {
             get {
@@ -277,7 +277,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The limit for this type of overhead has been reached!.
+        ///   Looks up a localized string similar to O limite para esse tipo de custo indireto já foi atingido!.
         /// </summary>
         public static string OVERHEAD_LIMIT_EXCEEDED {
             get {
@@ -286,7 +286,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This overhead was not found!.
+        ///   Looks up a localized string similar to Este custo indireto não foi encontrado!.
         /// </summary>
         public static string OVERHEAD_NOT_FOUND {
             get {
@@ -295,7 +295,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The price cannot be equal or less than zero!.
+        ///   Looks up a localized string similar to O preço não pode ser igual ou menor que zero!.
         /// </summary>
         public static string PRICE_LESS_THAN_ZERO {
             get {
@@ -304,7 +304,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This product cannot be deleted!.
+        ///   Looks up a localized string similar to Este produto não pode ser deletado!.
         /// </summary>
         public static string PRODUCT_BEING_USED {
             get {
@@ -313,7 +313,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This product was not found!.
+        ///   Looks up a localized string similar to Este produto não foi encontrado!.
         /// </summary>
         public static string PRODUCT_NOT_FOUND {
             get {
@@ -322,7 +322,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The production amount cannot be equal or less than zero!.
+        ///   Looks up a localized string similar to A quantidade de produção não pode ser igual ou menor que zero!.
         /// </summary>
         public static string PRODUCTION_AMOUNT_LESS_THAN_ZERO {
             get {
@@ -331,7 +331,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The production time cannot be equal or less than zero!.
+        ///   Looks up a localized string similar to O tempo de produção não pode ser igual ou menor que zero!.
         /// </summary>
         public static string PRODUCTION_TIME_LESS_THAN_ZERO {
             get {
@@ -340,7 +340,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The servings cannot be equal or less than zero!.
+        ///   Looks up a localized string similar to As porções não podem ser igual ou menor que zero!.
         /// </summary>
         public static string SERVINGS_LESS_THAN_ZERO {
             get {
@@ -349,7 +349,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This email has already been taken!.
+        ///   Looks up a localized string similar to Este email já está em uso!.
         /// </summary>
         public static string UNAVAILABLE_EMAIL {
             get {
@@ -358,7 +358,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There&apos;s no company with this ID!.
+        ///   Looks up a localized string similar to Não existe nenhuma empresa com esse ID!.
         /// </summary>
         public static string UNEXISTENT_COMPANY {
             get {
@@ -367,7 +367,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An unknown error occurred!.
+        ///   Looks up a localized string similar to Um erro desconhecido aconteceu!.
         /// </summary>
         public static string UNKNOWN_ERROR {
             get {
@@ -376,7 +376,7 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This user was not found!.
+        ///   Looks up a localized string similar to Este usuário não foi encontrado!.
         /// </summary>
         public static string USER_NOT_FOUND {
             get {

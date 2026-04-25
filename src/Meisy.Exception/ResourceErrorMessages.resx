@@ -139,19 +139,19 @@
     <value>A senha não é válida!</value>
   </data>
   <data name="UNAVAILABLE_EMAIL" xml:space="preserve">
-    <value>This email has already been taken!</value>
+    <value>Este email já está em uso!</value>
   </data>
   <data name="UNEXISTENT_COMPANY" xml:space="preserve">
-    <value>There's no company with this ID!</value>
+    <value>Não existe nenhuma empresa com esse ID!</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
-    <value>An unknown error occurred!</value>
+    <value>Um erro desconhecido aconteceu!</value>
   </data>
   <data name="PRICE_LESS_THAN_ZERO" xml:space="preserve">
-    <value>The price cannot be equal or less than zero!</value>
+    <value>O preço não pode ser igual ou menor que zero!</value>
   </data>
   <data name="INVALID_VALUE_FOR_TYPE" xml:space="preserve">
-    <value>This value for type is invalid!</value>
+    <value>Este valor para o tipo não é válido!</value>
   </data>
   <data name="INVALID_VALUE_FOR_MEASUREMENT_UNIT" xml:space="preserve">
     <value>Este valor para unidade de medida não é válido!</value>
@@ -169,16 +169,16 @@
     <value>O custo por hora não pode ser igual ou menor que zero!</value>
   </data>
   <data name="OVERHEAD_LIMIT_EXCEEDED" xml:space="preserve">
-    <value>The limit for this type of overhead has been reached!</value>
+    <value>O limite para esse tipo de custo indireto já foi atingido!</value>
   </data>
   <data name="OVERHEAD_NOT_FOUND" xml:space="preserve">
-    <value>This overhead was not found!</value>
+    <value>Este custo indireto não foi encontrado!</value>
   </data>
   <data name="PRODUCTION_TIME_LESS_THAN_ZERO" xml:space="preserve">
-    <value>The production time cannot be equal or less than zero!</value>
+    <value>O tempo de produção não pode ser igual ou menor que zero!</value>
   </data>
   <data name="SERVINGS_LESS_THAN_ZERO" xml:space="preserve">
-    <value>The servings cannot be equal or less than zero!</value>
+    <value>As porções não podem ser igual ou menor que zero!</value>
   </data>
   <data name="EMPTY_PRODUCT_INPUTS" xml:space="preserve">
     <value>Os insumos do produto não podem ficar vazios!</value>
@@ -187,13 +187,13 @@
     <value>A quantidade não pode ser igual ou menor que zero!</value>
   </data>
   <data name="PRODUCTION_AMOUNT_LESS_THAN_ZERO" xml:space="preserve">
-    <value>The production amount cannot be equal or less than zero!</value>
+    <value>A quantidade de produção não pode ser igual ou menor que zero!</value>
   </data>
   <data name="INVALID_INPUT_ID" xml:space="preserve">
     <value>O ID do insumo não é válido!</value>
   </data>
   <data name="PRODUCT_NOT_FOUND" xml:space="preserve">
-    <value>This product was not found!</value>
+    <value>Este produto não foi encontrado!</value>
   </data>
   <data name="INPUT_BEING_USED" xml:space="preserve">
     <value>Este insumo não pode ser deletado!</value>
@@ -211,18 +211,18 @@
     <value>O ID do produto não é válido!</value>
   </data>
   <data name="USER_NOT_FOUND" xml:space="preserve">
-    <value>This user was not found!</value>
+    <value>Este usuário não foi encontrado!</value>
   </data>
   <data name="ORDER_NOT_FOUND" xml:space="preserve">
-    <value>This order was not found!</value>
+    <value>Este pedido não foi encontrado!</value>
   </data>
   <data name="INVALID_VALUE_FOR_STATUS" xml:space="preserve">
-    <value>This value for order status is invalid!</value>
+    <value>Este valor para status não é válido!</value>
   </data>
   <data name="ORDER_STATUS_COMPLETED" xml:space="preserve">
-    <value>This order has already been completed or cancelled!</value>
+    <value>Este pedido já foi cancelado ou finalizado!</value>
   </data>
   <data name="PRODUCT_BEING_USED" xml:space="preserve">
-    <value>This product cannot be deleted!</value>
+    <value>Este produto não pode ser deletado!</value>
   </data>
 </root>
