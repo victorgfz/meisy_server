@@ -225,4 +225,7 @@
   <data name="PRODUCT_BEING_USED" xml:space="preserve">
     <value>Este produto não pode ser deletado!</value>
   </data>
+  <data name="EMPTY_ORDER_PRODUCTS" xml:space="preserve">
+    <value>Os produtos do pedido não podem ficar vazios!</value>
+  </data>
 </root>

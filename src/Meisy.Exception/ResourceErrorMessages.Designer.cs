@@ -115,6 +115,15 @@ namespace Meisy.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Os produtos do pedido não podem ficar vazios!.
+        /// </summary>
+        public static string EMPTY_ORDER_PRODUCTS {
+            get {
+                return ResourceManager.GetString("EMPTY_ORDER_PRODUCTS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Os insumos do produto não podem ficar vazios!.
         /// </summary>
         public static string EMPTY_PRODUCT_INPUTS {

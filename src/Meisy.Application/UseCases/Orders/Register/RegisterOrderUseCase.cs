@@ -63,8 +63,10 @@ namespace Meisy.Application.UseCases.Orders.Register
             {
                 var product = await _productReadRepository.GetById(companyId, item.ProductId) ?? throw new NotFoundException(ResourceErrorMessages.PRODUCT_NOT_FOUND);
 
+                item.PriceAtTheMoment = product.Price;
                 entityOrder.TotalPrice = item.PriceAtTheMoment * item.Amount + entityOrder.TotalPrice;
                 item.CompanyId = companyId;
+                
             }
 
             await _orderWriteRepository.Add(entityOrder);
