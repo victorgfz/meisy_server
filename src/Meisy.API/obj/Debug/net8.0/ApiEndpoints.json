@@ -792,5 +792,45 @@
         "StatusCode": 409
       }
     ]
+  },
+  {
+    "ContainingType": "Meisy.API.Controllers.ReportsController",
+    "Method": "GetAll",
+    "RelativePath": "Reports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Meisy.Communication.Responses.Reports.ResponseReportsJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Meisy.API.Controllers.ReportsController",
+    "Method": "GetInfoDashboard",
+    "RelativePath": "Reports/info-dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Meisy.Communication.Responses.Reports.ResponseReportInfoDashboardJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

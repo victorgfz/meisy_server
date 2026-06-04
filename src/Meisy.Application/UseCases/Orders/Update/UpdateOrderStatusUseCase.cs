@@ -50,7 +50,7 @@ public class UpdateOrderStatusUseCase : IUpdateOrderStatusUseCase
                 throw new BusinessRuleException(ResourceErrorMessages.ORDER_STATUS_COMPLETED);
         }
 
-        order.UpdatedAt = DateTime.UtcNow;
+        order.UpdatedAt = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow,"E. South America Standard Time");
 
         await _unitOfWork.Commit();
     }

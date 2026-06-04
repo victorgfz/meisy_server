@@ -173,6 +173,9 @@ namespace Meisy.Infrastructure.Migrations
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("CostAtTheMoment")
+                        .HasColumnType("decimal(65,30)");
+
                     b.Property<decimal>("PriceAtTheMoment")
                         .HasColumnType("decimal(65,30)");
 

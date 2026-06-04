@@ -10,6 +10,7 @@
 
         public int Amount { get; set; }
         public decimal PriceAtTheMoment { get; set; }
+        public decimal CostAtTheMoment { get; set; }
 
 
         public int CompanyId { get; set; }

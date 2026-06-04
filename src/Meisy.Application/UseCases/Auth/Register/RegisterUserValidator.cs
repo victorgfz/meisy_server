@@ -16,8 +16,11 @@ namespace Meisy.Application.UseCases.Auth.Register
                .WithMessage(ResourceErrorMessages.INVALID_EMAIL);
             RuleFor(user => user.Password).Matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$")
                 .WithMessage(ResourceErrorMessages.INVALID_PASSWORD);
+
             RuleFor(user => user.CompanyCode).Matches("^[a-zA-Z0-9]{6}$")
                 .WithMessage(ResourceErrorMessages.INVALID_COMPANY_ID);
+            RuleFor(user => user.CreatedAt).LessThanOrEqualTo(DateTime.UtcNow).WithMessage(ResourceErrorMessages.INVALID_DATE);
+            RuleFor(user => user.UpdatedAt).LessThanOrEqualTo(DateTime.UtcNow).WithMessage(ResourceErrorMessages.INVALID_DATE);
         }
     }
 }

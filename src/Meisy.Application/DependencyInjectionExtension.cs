@@ -20,6 +20,8 @@ using Meisy.Application.UseCases.Products.Get;
 using Meisy.Application.UseCases.Products.GetAll;
 using Meisy.Application.UseCases.Products.Register;
 using Meisy.Application.UseCases.Products.Update;
+using Meisy.Application.UseCases.Reports.GetAll;
+using Meisy.Application.UseCases.Reports.GetInfoDashboard;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Meisy.Application
@@ -63,7 +65,8 @@ namespace Meisy.Application
             services.AddScoped<IUpdateOrderStatusUseCase, UpdateOrderStatusUseCase>();
             services.AddScoped<ICancelOrderStatusUseCase, CancelOrderStatusUseCase>();
 
-
+            services.AddScoped<IGetInfoDashboardReportUseCase, GetInfoDashboardReportUseCase>();
+            services.AddScoped<IGetAllReportUseCase, GetAllReportUseCase>();
         }
     }
 }

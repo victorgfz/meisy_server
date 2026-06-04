@@ -1390,6 +1390,64 @@
           }
         }
       }
+    },
+    "/Reports/info-dashboard": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportInfoDashboardJson"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportInfoDashboardJson"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportInfoDashboardJson"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportsJson"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportsJson"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseReportsJson"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1659,6 +1717,14 @@
           "companyCode": {
             "type": "string",
             "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1732,6 +1798,24 @@
               "$ref": "#/components/schemas/RequestRegisterProductInputJson"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseBestSellingProductJson": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRevenue": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -2102,6 +2186,131 @@
           "companyId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseReportCurrentMonthJson": {
+        "type": "object",
+        "properties": {
+          "quantityOfOrders": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantityOfOrdersVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantityOfCompletedOrders": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRevenue": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalRevenueVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalCosts": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalCostsVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalProfit": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalProfitVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "bestSellingProducts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseBestSellingProductJson"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseReportInfoDashboardJson": {
+        "type": "object",
+        "properties": {
+          "balance": {
+            "type": "number",
+            "format": "double"
+          },
+          "variationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantityOfOrders": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantityOfCompletedOrders": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseReportPreviousMonthJson": {
+        "type": "object",
+        "properties": {
+          "quantityOfOrders": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantityOfCompletedOrders": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRevenue": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalRevenueVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalCosts": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalCostsVariationRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalProfit": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalProfitVariationRate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResponseReportsJson": {
+        "type": "object",
+        "properties": {
+          "currentMonth": {
+            "$ref": "#/components/schemas/ResponseReportCurrentMonthJson"
+          },
+          "previousMonths": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseReportPreviousMonthJson"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -58,7 +58,6 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)))
 
 // token configs
 
-
 builder.Services.AddAuthentication(config =>
 {
     config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -88,10 +87,6 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();    // permite qualquer header
     });
 });
-
-
-
-
 
 
 //

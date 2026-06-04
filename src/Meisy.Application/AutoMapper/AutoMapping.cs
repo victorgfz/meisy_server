@@ -28,9 +28,7 @@ namespace Meisy.Application.AutoMapper
         private void RequestToEntity()
         {
             CreateMap<RequestRegisterUserJson, User>()
-                .ForMember(destination => destination.Password, config => config.Ignore())
-                .ForMember(destination => destination.CreatedAt, config => config.MapFrom(_=> DateTime.UtcNow))
-                .ForMember(destination => destination.UpdatedAt, config => config.MapFrom(_=> DateTime.UtcNow));
+                .ForMember(destination => destination.Password, config => config.Ignore());
 
             CreateMap<RequestRegisterInputJson, Input>();
             CreateMap<RequestUpdateInputJson, Input>();

@@ -57,7 +57,8 @@ namespace Meisy.Application.UseCases.Products.Update
                     throw new NotFoundException(ResourceErrorMessages.INPUT_NOT_FOUND);
                 }
 
-                
+                item.ProductionAmount = item.ProductionAmount / request.Servings;
+
             }
 
 
@@ -68,6 +69,7 @@ namespace Meisy.Application.UseCases.Products.Update
 
             foreach(var item in product.ProductInputs)
             {
+
                 item.ProductId = product.Id;
                 item.CompanyId = companyId;
             }

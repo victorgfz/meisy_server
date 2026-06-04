@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meisy.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af6e1d0a846576444df8e8215e0c60603176a1dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c522a299cd754df0570a66cb4760bf73eea7af80")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meisy.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meisy.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
