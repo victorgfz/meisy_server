@@ -1,4 +1,4 @@
-﻿using Meisy.Domain.Repositories;
+using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.User;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,6 +33,16 @@ namespace Meisy.Infrastructure.Data.Repositories.User
         {
             return await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Id == userId && user.CompanyId == companyId);
 
+        }
+
+        public void Update(Domain.Entities.User user)
+        {
+            _dbContext.Users.Update(user);
+        }
+
+        public async Task<Domain.Entities.User?> GetByRefreshToken(string refreshToken)
+        {
+            return await _dbContext.Users.Include(u => u.Company).FirstOrDefaultAsync(user => user.RefreshToken != null && user.RefreshToken.Equals(refreshToken));
         }
     }
 }

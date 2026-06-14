@@ -1,4 +1,4 @@
-﻿using Meisy.Domain.Entities;
+using Meisy.Domain.Entities;
 
 namespace Meisy.Domain.Repositories.User
 {
@@ -8,5 +8,6 @@ namespace Meisy.Domain.Repositories.User
         Task<bool> EmailExists(string email);
         Task<Meisy.Domain.Entities.User?> GetByEmail(string email);
         Task<Meisy.Domain.Entities.User?> GetById(int companyId,int userId);
+        Task<Meisy.Domain.Entities.User?> GetByRefreshToken(string refreshToken);
     }
 }

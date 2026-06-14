@@ -1,4 +1,4 @@
-﻿namespace Meisy.Domain.Entities
+namespace Meisy.Domain.Entities
 {
     public class User : AuditableEntity
     {
@@ -7,6 +7,9 @@
         public string Password { get; set; } = string.Empty;
         public int CompanyId { get; set; }
         public Company Company { get; set; } = default!;
+
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
         
     }
 }

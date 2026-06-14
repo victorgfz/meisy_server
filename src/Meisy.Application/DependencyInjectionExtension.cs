@@ -1,5 +1,6 @@
-﻿using Meisy.Application.AutoMapper;
+using Meisy.Application.AutoMapper;
 using Meisy.Application.UseCases.Auth.Login;
+using Meisy.Application.UseCases.Auth.RefreshToken;
 using Meisy.Application.UseCases.Auth.Register;
 using Meisy.Application.UseCases.Clients.Delete;
 using Meisy.Application.UseCases.Clients.GetAll;
@@ -39,6 +40,7 @@ namespace Meisy.Application
         {
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
             services.AddScoped<ILoginUseCase, LoginUseCase>();
+            services.AddScoped<IRefreshTokenUseCase, RefreshTokenUseCase>();
 
             services.AddScoped<IRegisterInputUseCase, RegisterInputUseCase>();
             services.AddScoped<IGetAllInputUseCase, GetAllInputUseCase>();

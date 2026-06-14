@@ -1,4 +1,5 @@
-﻿using Meisy.Application.UseCases.Auth.Login;
+using Meisy.Application.UseCases.Auth.Login;
+using Meisy.Application.UseCases.Auth.RefreshToken;
 using Meisy.Application.UseCases.Auth.Register;
 using Meisy.Communication.Requests.Auth;
 using Meisy.Communication.Responses;
@@ -34,6 +35,19 @@ namespace Meisy.API.Controllers
         public async Task<IActionResult> Login(
             [FromServices] ILoginUseCase useCase,
             [FromBody] RequestLoginJson request
+            )
+        {
+            var result = await useCase.Execute(request);
+
+            return Ok(result);
+        }
+
+        [HttpPost("refresh-token")]
+        [ProducesResponseType(typeof(ResponseLoginJson), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status401Unauthorized)]
+        public async Task<IActionResult> RefreshToken(
+            [FromServices] IRefreshTokenUseCase useCase,
+            [FromBody] RequestRefreshTokenJson request
             )
         {
             var result = await useCase.Execute(request);

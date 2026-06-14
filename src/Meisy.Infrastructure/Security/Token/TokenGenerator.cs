@@ -1,4 +1,4 @@
-﻿using Meisy.Domain.Entities;
+using Meisy.Domain.Entities;
 using Meisy.Domain.Security.Token;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -37,6 +37,14 @@ namespace Meisy.Infrastructure.Security.Token
             var securityToken = tokenHandler.CreateToken(tokenDescriptor);
 
             return tokenHandler.WriteToken(securityToken);
+        }
+
+        public string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
         }
 
         private SymmetricSecurityKey SecurityKey()

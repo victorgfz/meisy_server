@@ -1,4 +1,4 @@
-﻿namespace Meisy.Communication.Responses.Auth
+namespace Meisy.Communication.Responses.Auth
 {
     public class ResponseLoginJson
     {
@@ -6,5 +6,6 @@
         public string CompanyCode { get; set; } = string.Empty;
 
         public string Token { get; set; } = string.Empty;
+        public string RefreshToken { get; set; } = string.Empty;
     }
 }
