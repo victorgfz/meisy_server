@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\Victor\\source\\repos\\Meisy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\inputs\\register\\registerinputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\inputs\\register\\registerinputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\auth\\register\\registeruservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\auth\\register\\registeruservalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\token\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\token\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.infrastructure\\data\\repositories\\overhead\\overheadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|solutionrelative:src\\meisy.infrastructure\\data\\repositories\\overhead\\overheadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\controllers\\inputscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\controllers\\inputscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.application\\usecases\\reports\\getall\\getallreportusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\reports\\getall\\getallreportusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{195764F2-4179-4E2A-97D7-59347D13E95D}|src\\Meisy.Application\\Meisy.Application.csproj|solutionrelative:src\\meisy.application\\usecases\\reports\\getinfodashboard\\getinfodashboardreportusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.infrastructure\\data\\repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03F7D2C4-0D7A-4C6F-9425-47C1657A2C04}|src\\Meisy.Infrastructure\\Meisy.Infrastructure.csproj|solutionrelative:src\\meisy.infrastructure\\data\\repositories\\order\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|c:\\users\\victor\\source\\repos\\meisy\\src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{255E488A-4107-4BA6-9C2F-B8E2D38F058A}|src\\Meisy.API\\Meisy.API.csproj|solutionrelative:src\\meisy.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +58,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "RegisterInputValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Inputs\\Register\\RegisterInputValidator.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Inputs\\Register\\RegisterInputValidator.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Inputs\\Register\\RegisterInputValidator.cs",
+              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Inputs\\Register\\RegisterInputValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:46:48.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterUserValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Auth\\Register\\RegisterUserValidator.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Auth\\Register\\RegisterUserValidator.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Auth\\Register\\RegisterUserValidator.cs",
+              "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Auth\\Register\\RegisterUserValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:46:17.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "src\\Meisy.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:45:46.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Token\\TokenProvider.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.API\\Token\\TokenProvider.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Token\\TokenProvider.cs",
+              "RelativeToolTip": "src\\Meisy.API\\Token\\TokenProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:41:14.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OverheadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Infrastructure\\Data\\Repositories\\Overhead\\OverheadRepository.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.Infrastructure\\Data\\Repositories\\Overhead\\OverheadRepository.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Infrastructure\\Data\\Repositories\\Overhead\\OverheadRepository.cs",
+              "RelativeToolTip": "src\\Meisy.Infrastructure\\Data\\Repositories\\Overhead\\OverheadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:33:43.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InputsController.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\InputsController.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.API\\Controllers\\InputsController.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\InputsController.cs",
+              "RelativeToolTip": "src\\Meisy.API\\Controllers\\InputsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:32:06.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "src\\Meisy.API\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "src\\Meisy.API\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T10:32:02.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GetAllReportUseCase.cs",
               "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Reports\\GetAll\\GetAllReportUseCase.cs",
               "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Reports\\GetAll\\GetAllReportUseCase.cs",
               "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Reports\\GetAll\\GetAllReportUseCase.cs",
               "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Reports\\GetAll\\GetAllReportUseCase.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAwwD0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAMwD0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T19:53:36.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T19:53:36.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "GetInfoDashboardReportUseCase.cs",
               "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Application\\UseCases\\Reports\\GetInfoDashboard\\GetInfoDashboardReportUseCase.cs",
               "RelativeDocumentMoniker": "src\\Meisy.Application\\UseCases\\Reports\\GetInfoDashboard\\GetInfoDashboardReportUseCase.cs",
@@ -55,12 +166,11 @@
               "RelativeToolTip": "src\\Meisy.Application\\UseCases\\Reports\\GetInfoDashboard\\GetInfoDashboardReportUseCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T19:53:36.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T19:53:36.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.Infrastructure\\Data\\Repositories\\Order\\OrderRepository.cs",
               "RelativeDocumentMoniker": "src\\Meisy.Infrastructure\\Data\\Repositories\\Order\\OrderRepository.cs",
@@ -72,26 +182,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\Meisy.API\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Properties\\launchSettings.json",
               "RelativeToolTip": "src\\Meisy.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-31T20:28:12.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Program.cs",
               "RelativeDocumentMoniker": "src\\Meisy.API\\Program.cs",
               "ToolTip": "C:\\Users\\Victor\\source\\repos\\Meisy\\src\\Meisy.API\\Program.cs",
               "RelativeToolTip": "src\\Meisy.API\\Program.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAYwHAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-31T20:27:37.056Z"
             }
