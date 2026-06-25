@@ -136,6 +136,9 @@ namespace Meisy.Infrastructure.Migrations
                     b.Property<DateTime>("DeliveryDate")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<DateTime?>("DeliveryReminderSentAt")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<int>("SellerId")
                         .HasColumnType("int");
 
@@ -285,6 +288,54 @@ namespace Meisy.Infrastructure.Migrations
                     b.HasIndex("InputId");
 
                     b.ToTable("Product_Inputs");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.PushSubscription", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Auth")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Endpoint")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<DateTime?>("LastUsedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("P256DH")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<bool>("ReceiveNotifications")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Endpoint")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PushSubscriptions");
                 });
 
             modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
@@ -452,6 +503,17 @@ namespace Meisy.Infrastructure.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Meisy.Domain.Entities.PushSubscription", b =>
+                {
+                    b.HasOne("Meisy.Domain.Entities.User", "User")
+                        .WithMany("PushSubscriptions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
                 {
                     b.HasOne("Meisy.Domain.Entities.Company", "Company")
@@ -471,6 +533,11 @@ namespace Meisy.Infrastructure.Migrations
             modelBuilder.Entity("Meisy.Domain.Entities.Product", b =>
                 {
                     b.Navigation("ProductInputs");
+                });
+
+            modelBuilder.Entity("Meisy.Domain.Entities.User", b =>
+                {
+                    b.Navigation("PushSubscriptions");
                 });
 #pragma warning restore 612, 618
         }

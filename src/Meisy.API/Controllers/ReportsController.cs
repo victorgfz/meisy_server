@@ -2,12 +2,15 @@
 using Meisy.Application.UseCases.Reports.GetAll;
 using Meisy.Application.UseCases.Reports.GetInfoDashboard;
 using Meisy.Communication.Responses.Reports;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Meisy.API.Controllers
 {
     [Route("/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class ReportsController : ControllerBase
     {
         [HttpGet("info-dashboard")]

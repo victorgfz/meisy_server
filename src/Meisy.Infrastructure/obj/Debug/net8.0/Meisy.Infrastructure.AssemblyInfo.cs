@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meisy.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6ec4e09540a85b64db73279316854e4ffff50cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91f4211b63f8849ff6000cf241ec9a457c216a29")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meisy.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meisy.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

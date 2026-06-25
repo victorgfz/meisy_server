@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Meisy.Communication.Requests.Orders;
+using Meisy.Application.Services.Notifications;
 using Meisy.Communication.Responses.Orders;
 using Meisy.Communication.Responses.Products;
 using Meisy.Domain.Entities;
@@ -25,6 +26,7 @@ namespace Meisy.Application.UseCases.Orders.Register
         private readonly IOverheadReadOnlyRepository _overheadReadRepository;
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ICompanyNotificationService _companyNotificationService;
 
         public RegisterOrderUseCase(
             ILoggedUser loggedUser,
@@ -33,7 +35,8 @@ namespace Meisy.Application.UseCases.Orders.Register
             IClientReadOnlyRepository clientReadRepository,
             IOverheadReadOnlyRepository overheadReadRepository,
             IMapper mapper,
-            IUnitOfWork unitOfWork
+            IUnitOfWork unitOfWork,
+            ICompanyNotificationService companyNotificationService
             )
         {
             _loggedUser = loggedUser;
@@ -44,6 +47,7 @@ namespace Meisy.Application.UseCases.Orders.Register
             _clientReadRepository = clientReadRepository;
             _overheadReadRepository = overheadReadRepository;
 
+            _companyNotificationService = companyNotificationService;
         }
 
         public async Task<ResponseOrderJson> Execute(RequestRegisterOrderJson request)
@@ -80,6 +84,15 @@ namespace Meisy.Application.UseCases.Orders.Register
 
             await _orderWriteRepository.Add(entityOrder);
             await _unitOfWork.Commit();
+
+            try
+            {
+                await _companyNotificationService.NotifyOrderCreated(companyId, entityOrder.Id, entityOrder.DeliveryDate);
+            }
+            catch
+            {
+                // Push notification failures must not make order creation fail.
+            }
 
             return _mapper.Map<ResponseOrderJson>(entityOrder);
 

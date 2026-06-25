@@ -446,6 +446,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.15.0, )"
+            },
+            "WebPush": {
+              "target": "Package",
+              "version": "[1.0.13, )"
             }
           },
           "imports": [

@@ -6,6 +6,7 @@ namespace Meisy.Domain.Entities
     {
         public decimal TotalPrice { get; set; }
         public DateTime DeliveryDate { get; set; }
+        public DateTime? DeliveryReminderSentAt { get; set; }
 
         public OrderStatus Status { get; set; }
 

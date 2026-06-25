@@ -386,6 +386,114 @@
     ]
   },
   {
+    "ContainingType": "Meisy.API.Controllers.NotificationController",
+    "Method": "GetPreferences",
+    "RelativePath": "Notification/preferences",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "endpoint",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Meisy.Communication.Responses.Notification.ResponseNotificationPreferencesJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Meisy.API.Controllers.NotificationController",
+    "Method": "UpdatePreferences",
+    "RelativePath": "Notification/preferences",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Meisy.Communication.Requests.Notification.RequestUpdatePreferencesJson",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Meisy.Communication.Responses.ResponseErrorJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Meisy.API.Controllers.NotificationController",
+    "Method": "Subscribe",
+    "RelativePath": "Notification/subscribe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Meisy.Communication.Requests.Notification.RequestPushSubscriptionJson",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Meisy.Communication.Responses.ResponseErrorJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "Meisy.API.Controllers.NotificationController",
+    "Method": "GetVapidPublicKey",
+    "RelativePath": "Notification/vapid-public-key",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Meisy.Communication.Responses.Notification.ResponseVapidPublicKeyJson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Meisy.API.Controllers.OrdersController",
     "Method": "Register",
     "RelativePath": "Orders",

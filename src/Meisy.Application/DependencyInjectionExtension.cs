@@ -1,4 +1,5 @@
 using Meisy.Application.AutoMapper;
+using Meisy.Application.Services.Notifications;
 using Meisy.Application.UseCases.Auth.Login;
 using Meisy.Application.UseCases.Auth.RefreshToken;
 using Meisy.Application.UseCases.Auth.Register;
@@ -14,6 +15,9 @@ using Meisy.Application.UseCases.Orders.GetAll;
 using Meisy.Application.UseCases.Orders.Register;
 using Meisy.Application.UseCases.Orders.Update;
 using Meisy.Application.UseCases.Overheads.GetAll;
+using Meisy.Application.UseCases.Notifications.GetPreferences;
+using Meisy.Application.UseCases.Notifications.Register;
+using Meisy.Application.UseCases.Notifications.UpdatePreferences;
 using Meisy.Application.UseCases.Overheads.Register;
 using Meisy.Application.UseCases.Overheads.Update;
 using Meisy.Application.UseCases.Products.Delete;
@@ -38,6 +42,8 @@ namespace Meisy.Application
 
         private static void AddUseCases(IServiceCollection services)
         {
+            services.AddScoped<ICompanyNotificationService, CompanyNotificationService>();
+
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
             services.AddScoped<ILoginUseCase, LoginUseCase>();
             services.AddScoped<IRefreshTokenUseCase, RefreshTokenUseCase>();
@@ -66,6 +72,10 @@ namespace Meisy.Application
             services.AddScoped<IGetAllOrderUseCase, GetAllOrderUseCase>();
             services.AddScoped<IUpdateOrderStatusUseCase, UpdateOrderStatusUseCase>();
             services.AddScoped<ICancelOrderStatusUseCase, CancelOrderStatusUseCase>();
+
+            services.AddScoped<IRegisterPushSubscriptionUseCase, RegisterPushSubscriptionUseCase>();
+            services.AddScoped<IGetNotificationPreferencesUseCase, GetNotificationPreferencesUseCase>();
+            services.AddScoped<IUpdateNotificationPreferencesUseCase, UpdateNotificationPreferencesUseCase>();
 
             services.AddScoped<IGetInfoDashboardReportUseCase, GetInfoDashboardReportUseCase>();
             services.AddScoped<IGetAllReportUseCase, GetAllReportUseCase>();

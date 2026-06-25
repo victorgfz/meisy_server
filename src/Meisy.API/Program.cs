@@ -1,3 +1,4 @@
+using Meisy.API.BackgroundServices;
 using Meisy.API.Filters;
 using Meisy.API.Token;
 using Meisy.Application;
@@ -52,6 +53,7 @@ builder.Services.AddSwaggerGen(config =>
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
+builder.Services.AddHostedService<DeliveryReminderBackgroundService>();
 
 // exception filter
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));

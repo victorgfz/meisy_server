@@ -22,6 +22,10 @@ using Meisy.Domain.Repositories.Client;
 using Meisy.Infrastructure.Data.Repositories.Client;
 using Meisy.Domain.Repositories.Order;
 using Meisy.Infrastructure.Data.Repositories.Order;
+using Meisy.Domain.Repositories.PushSubscription;
+using Meisy.Domain.Services.WebPush;
+using Meisy.Infrastructure.Data.Repositories.PushSubscription;
+using Meisy.Infrastructure.Services.WebPush;
 
 namespace Meisy.Infrastructure
 {
@@ -65,6 +69,9 @@ namespace Meisy.Infrastructure
                 services.AddScoped<IClientWriteOnlyRepository, ClientRepository>();
                 services.AddScoped<IOrderReadOnlyRepository, OrderRepository>();
                 services.AddScoped<IOrderWriteOnlyRepository, OrderRepository>();
+                services.AddScoped<IPushSubscriptionReadOnlyRepository, PushSubscriptionRepository>();
+                services.AddScoped<IPushSubscriptionWriteOnlyRepository, PushSubscriptionRepository>();
+                services.AddScoped<IWebPushService, WebPushService>();
             }
 
         private static void AddToken(IServiceCollection services, IConfiguration configuration)

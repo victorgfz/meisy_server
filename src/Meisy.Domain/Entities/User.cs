@@ -10,6 +10,7 @@ namespace Meisy.Domain.Entities
 
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }
+        public List<PushSubscription> PushSubscriptions { get; set; } = [];
         
     }
 }

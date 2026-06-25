@@ -43,6 +43,16 @@ namespace Meisy.Infrastructure.Data.Repositories.Order
                 .ToListAsync();
         }
 
+        public async Task<List<Domain.Entities.Order>> GetPendingOrdersForDeliveryReminder(DateTime now, DateTime reminderLimit)
+        {
+            return await _dbContext.Orders
+                .Where(o => o.Status == Domain.Enums.OrderStatus.Pending
+                    && o.DeliveryReminderSentAt == null
+                    && o.DeliveryDate > now
+                    && o.DeliveryDate <= reminderLimit)
+                .ToListAsync();
+        }
+
         public async Task<List<OrderProductIncidence>> GetTopProductsByMonth(int companyId, DateTime date, int top = 3)
         {
             return await _dbContext.Order_Products

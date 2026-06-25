@@ -14,6 +14,7 @@ namespace Meisy.Infrastructure.Data
         public DbSet<ProductInput> Product_Inputs { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> Order_Products { get; set; }
+        public DbSet<PushSubscription> PushSubscriptions { get; set; }
         public DbSet<Client> Clients { get; set; }
 
 
@@ -31,6 +32,18 @@ namespace Meisy.Infrastructure.Data
                 entity.HasOne(e => e.Input)
                       .WithMany()
                       .HasForeignKey(e => e.InputId);
+            });
+
+            modelBuilder.Entity<PushSubscription>(entity =>
+            {
+                entity.Property(e => e.Endpoint).HasMaxLength(500);
+                entity.Property(e => e.P256DH).HasMaxLength(255);
+                entity.Property(e => e.Auth).HasMaxLength(255);
+                entity.HasIndex(e => e.Endpoint).IsUnique();
+
+                entity.HasOne(e => e.User)
+                      .WithMany(e => e.PushSubscriptions)
+                      .HasForeignKey(e => e.UserId);
             });
 
             modelBuilder.Entity<OrderProduct>(entity =>
