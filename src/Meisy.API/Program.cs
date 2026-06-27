@@ -84,7 +84,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("client", policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173")     //
+            .WithOrigins("http://localhost:5173", "https://meisy-client.pages.dev")     //
             .AllowAnyMethod()     // GET, POST, PUT...
             .AllowAnyHeader();    // permite qualquer header
     });
