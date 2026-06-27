@@ -81,10 +81,10 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy", policy =>
+    options.AddPolicy("client", policy =>
     {
         policy
-            .AllowAnyOrigin()     // permite qualquer domínio
+            .WithOrigins("http://localhost:5173")     //
             .AllowAnyMethod()     // GET, POST, PUT...
             .AllowAnyHeader();    // permite qualquer header
     });
@@ -96,7 +96,7 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // use cors
-app.UseCors("CorsPolicy");
+app.UseCors("client");
 
 if (app.Environment.IsDevelopment())
 {
