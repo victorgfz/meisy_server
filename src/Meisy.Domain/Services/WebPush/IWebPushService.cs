@@ -3,8 +3,17 @@ using Meisy.Domain.Models;
 
 namespace Meisy.Domain.Services.WebPush
 {
+    public enum WebPushSendResult
+    {
+        Success,
+        InvalidSubscription,
+        Failed,
+    }
+
     public interface IWebPushService
     {
-        Task<bool> SendNotificationAsync(PushSubscription subscription, PushNotificationPayload payload);
+        Task<WebPushSendResult> SendNotificationAsync(
+            PushSubscription subscription,
+            PushNotificationPayload payload);
     }
 }

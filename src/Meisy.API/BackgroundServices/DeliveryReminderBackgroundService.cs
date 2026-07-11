@@ -57,15 +57,39 @@ public class DeliveryReminderBackgroundService : BackgroundService
             return;
         }
 
+        _logger.LogInformation(
+            "Found {OrderCount} pending delivery reminders between {Now} and {ReminderLimit}.",
+            orders.Count,
+            now,
+            reminderLimit);
+
+        var hasProcessedOrders = false;
+
         foreach (var order in orders)
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            await companyNotificationService.NotifyDeliveryReminder(order.CompanyId, order.Id, order.DeliveryDate);
+            var wasProcessed = await companyNotificationService.NotifyDeliveryReminder(
+                order.CompanyId,
+                order.Id,
+                order.DeliveryDate);
+
+            if (!wasProcessed)
+            {
+                _logger.LogWarning(
+                    "Delivery reminder for order {OrderId} was not marked as sent because at least one push delivery failed. It will be retried on the next cycle.",
+                    order.Id);
+                continue;
+            }
+
             order.DeliveryReminderSentAt = now;
             order.UpdatedAt = now;
+            hasProcessedOrders = true;
         }
 
-        await unitOfWork.Commit();
+        if (hasProcessedOrders)
+        {
+            await unitOfWork.Commit();
+        }
     }
 }
