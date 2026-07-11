@@ -47,7 +47,7 @@ namespace Meisy.Application.UseCases.Auth.Login
             var refreshToken = _tokenGenerator.GenerateRefreshToken();
             
             user.RefreshToken = refreshToken;
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(30);
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenPolicy.InactivityExpirationDays);
 
             _userWriteRepository.Update(user);
             await _unitOfWork.Commit();

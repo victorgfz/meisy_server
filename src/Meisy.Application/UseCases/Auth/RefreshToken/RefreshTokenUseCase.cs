@@ -35,7 +35,7 @@ namespace Meisy.Application.UseCases.Auth.RefreshToken
                 throw new InvalidLoginException();
             }
 
-            if (user.RefreshTokenExpiryTime < DateTime.UtcNow)
+            if (user.RefreshTokenExpiryTime is null || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
             {
                 throw new InvalidLoginException();
             }
@@ -43,7 +43,7 @@ namespace Meisy.Application.UseCases.Auth.RefreshToken
             var newRefreshToken = _tokenGenerator.GenerateRefreshToken();
             
             user.RefreshToken = newRefreshToken;
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(30);
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenPolicy.InactivityExpirationDays);
 
             _userWriteRepository.Update(user);
             await _unitOfWork.Commit();

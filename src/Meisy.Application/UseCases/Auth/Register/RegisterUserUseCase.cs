@@ -68,6 +68,10 @@ namespace Meisy.Application.UseCases.Auth.Register
             entityUser.Password = _bcrypt.Encrypt( request.Password);
             entityUser.CompanyId = company.Id;
 
+            var refreshToken = _tokenGenerator.GenerateRefreshToken();
+            entityUser.RefreshToken = refreshToken;
+            entityUser.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenPolicy.InactivityExpirationDays);
+
 
             await _userWriteRepository.Add( entityUser );
             await _unitOfWork.Commit();
@@ -77,6 +81,7 @@ namespace Meisy.Application.UseCases.Auth.Register
                 Name = request.Name,
                 CompanyCode = request.CompanyCode,
                 Token = _tokenGenerator.GenerateToken(entityUser),
+                RefreshToken = refreshToken,
             };
         }
 
