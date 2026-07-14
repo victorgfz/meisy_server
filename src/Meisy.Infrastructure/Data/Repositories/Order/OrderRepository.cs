@@ -62,8 +62,8 @@ namespace Meisy.Infrastructure.Data.Repositories.Order
                 .Select(it => new OrderProductIncidence {
                     ProductId = it.Key.ProductId,
                     Description = it.Key.Description,
-                    Total = it.Count(),
-                    TotalRevenue = it.Sum(p => p.PriceAtTheMoment) })
+                    Total = it.Sum(op => op.Amount),
+                    TotalRevenue = it.Sum(op => op.PriceAtTheMoment * op.Amount)})
                 .OrderByDescending(it => it.Total)
                 .Take(top)
                 .ToListAsync();
