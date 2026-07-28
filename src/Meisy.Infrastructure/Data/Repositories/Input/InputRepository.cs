@@ -22,7 +22,7 @@ namespace Meisy.Infrastructure.Data.Repositories.Input
 
         public async Task<List<Domain.Entities.Input>> GetAll(int companyId)
         {
-            return await _dbContext.Inputs.AsNoTracking().Where(i => i.CompanyId == companyId).ToListAsync();
+            return await _dbContext.Inputs.AsNoTracking().Where(i => i.CompanyId == companyId).OrderBy(i => i.Description).ToListAsync();
         }
 
         public async Task<Domain.Entities.Input?> GetById(int companyId, int inputId)

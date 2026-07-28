@@ -20,7 +20,7 @@ namespace Meisy.Infrastructure.Data.Repositories.Product
 
         public async Task<List<Domain.Entities.Product>> GetAll(int companyId)
         {
-            return await _dbContext.Products.AsNoTracking().Where(p => p.CompanyId == companyId).ToListAsync();
+            return await _dbContext.Products.AsNoTracking().Where(p => p.CompanyId == companyId).OrderBy(p => p.Description).ToListAsync();
         }
 
         public async Task<Domain.Entities.Product?> GetById(int companyId, int productId)
