@@ -482,3 +482,9 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Pasta de publicação do .NET
+**/publish/
+
+# Arquivo zip da API
+api-meisy.zip
