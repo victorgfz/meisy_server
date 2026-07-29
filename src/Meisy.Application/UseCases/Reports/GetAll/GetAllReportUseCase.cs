@@ -35,7 +35,7 @@ namespace Meisy.Application.UseCases.Reports.GetAll
                 quantityOfCompletedOrders = ordersCurrentMonth.Count(o => o.Status == Domain.Enums.OrderStatus.Completed);
                 totalRevenue = ordersCurrentMonth.Where(o => o.Status == Domain.Enums.OrderStatus.Completed).Sum(o => o.TotalPrice);
                 totalCosts = ordersCurrentMonth.Where(o => o.Status == Domain.Enums.OrderStatus.Completed).SelectMany(o => o.OrderProducts)
-                    .Sum(p => p.CostAtTheMoment);
+                    .Sum(p => p.CostAtTheMoment * p.Amount);
 
             }
             
@@ -63,7 +63,7 @@ namespace Meisy.Application.UseCases.Reports.GetAll
                 {
                     quantityOfCompletedOrdersMonth = ordersMonth.Count(o => o.Status == Domain.Enums.OrderStatus.Completed);
                     totalRevenueMonth = ordersMonth.Where(o => o.Status == Domain.Enums.OrderStatus.Completed).Sum(o => o.TotalPrice);
-                    totalCostsMonth = ordersMonth.Where(o => o.Status == Domain.Enums.OrderStatus.Completed).SelectMany(o => o.OrderProducts).Sum(p => p.CostAtTheMoment);
+                    totalCostsMonth = ordersMonth.Where(o => o.Status == Domain.Enums.OrderStatus.Completed).SelectMany(o => o.OrderProducts).Sum(p => p.CostAtTheMoment * p.Amount);
 
                     if(i == 0)
                     {
