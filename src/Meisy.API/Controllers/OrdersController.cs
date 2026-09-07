@@ -1,4 +1,4 @@
-﻿using Meisy.Application.UseCases.Orders.GetAll;
+using Meisy.Application.UseCases.Orders.GetAll;
 using Meisy.Application.UseCases.Orders.Register;
 using Meisy.Application.UseCases.Orders.Update;
 using Meisy.Application.UseCases.Products.GetAll;
@@ -54,6 +54,21 @@ namespace Meisy.API.Controllers
         }
 
 
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status409Conflict)]
+        public async Task<IActionResult> Update(
+            [FromRoute] int id,
+            [FromBody] RequestUpdateOrderJson request,
+            [FromServices] IUpdateOrderUseCase useCase
+            )
+        {
+            await useCase.Execute(request, id);
+            return NoContent();
+        }
+
         [HttpPatch("{id}/cancel")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
@@ -66,6 +81,8 @@ namespace Meisy.API.Controllers
             await useCase.Execute(id);
             return NoContent();
         }
+
+
 
     }
 }

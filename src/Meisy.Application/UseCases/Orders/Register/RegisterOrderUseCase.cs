@@ -1,19 +1,17 @@
-﻿using AutoMapper;
-using Meisy.Communication.Requests.Orders;
+using AutoMapper;
 using Meisy.Application.Services.Notifications;
+using Meisy.Application.Utils;
+using Meisy.Communication.Requests.Orders;
 using Meisy.Communication.Responses.Orders;
-using Meisy.Communication.Responses.Products;
 using Meisy.Domain.Entities;
 using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.Client;
-using Meisy.Domain.Repositories.Input;
 using Meisy.Domain.Repositories.Order;
 using Meisy.Domain.Repositories.Overhead;
 using Meisy.Domain.Repositories.Product;
 using Meisy.Domain.Services.LoggedUser;
 using Meisy.Exception;
 using Meisy.Exception.ExceptionBase;
-using Microsoft.VisualBasic;
 
 namespace Meisy.Application.UseCases.Orders.Register
 {
@@ -46,7 +44,6 @@ namespace Meisy.Application.UseCases.Orders.Register
             _orderWriteRepository = orderWriteRepository;
             _clientReadRepository = clientReadRepository;
             _overheadReadRepository = overheadReadRepository;
-
             _companyNotificationService = companyNotificationService;
         }
 
@@ -59,10 +56,9 @@ namespace Meisy.Application.UseCases.Orders.Register
             var clientId = request.ClientId;
 
             var client = clientId is null ? null : (await _clientReadRepository.GetById(companyId, clientId.Value)
-                         ?? throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND)) ;
+                         ?? throw new NotFoundException(ResourceErrorMessages.CLIENT_NOT_FOUND));
 
             var entityOrder = _mapper.Map<Order>(request);
-
 
             entityOrder.CompanyId = companyId;
             entityOrder.SellerId = userId;
@@ -76,10 +72,9 @@ namespace Meisy.Application.UseCases.Orders.Register
                 var product = await _productReadRepository.GetById(companyId, item.ProductId) ?? throw new NotFoundException(ResourceErrorMessages.PRODUCT_NOT_FOUND);
                 item.PriceAtTheMoment = product.Price;
 
-                item.CostAtTheMoment = CalculateProductCost(product, overheads);
+                item.CostAtTheMoment = ProductCostUtils.CalculateProductCost(product, overheads);
                 entityOrder.TotalPrice = item.PriceAtTheMoment * item.Amount + entityOrder.TotalPrice;
                 item.CompanyId = companyId;
-                
             }
 
             await _orderWriteRepository.Add(entityOrder);
@@ -95,60 +90,12 @@ namespace Meisy.Application.UseCases.Orders.Register
             }
 
             return _mapper.Map<ResponseOrderJson>(entityOrder);
-
-        }
-
-
-        private static decimal FormatAmount(double amount, Communication.Enums.MeasurementUnit unit)
-        {
-            var multiplier = unit switch
-            {
-                Communication.Enums.MeasurementUnit.kg => 1000m,
-                Communication.Enums.MeasurementUnit.l => 1000m,
-                _ => 1m
-            };
-
-            return (decimal)amount * multiplier;
-        }
-
-        private static decimal FormatProductionAmount(double amount, Communication.Enums.ProductionMeasurementUnit unit)
-        {
-            var multiplier = unit switch
-            {
-                Communication.Enums.ProductionMeasurementUnit.kg => 1000m,
-                Communication.Enums.ProductionMeasurementUnit.l => 1000m,
-                Communication.Enums.ProductionMeasurementUnit.tsp => 5m,
-                Communication.Enums.ProductionMeasurementUnit.tbscp => 15m,
-                _ => 1m
-            };
-
-            return (decimal)amount * multiplier;
-        }
-
-        private decimal CalculateProductCost(Product product, List<Overhead> overheads)
-        {
-            decimal productionPrice = 0;
-            foreach (var item in product.ProductInputs)
-            {
-                productionPrice =
-                    productionPrice +
-                    (item.Input.Price /
-                    FormatAmount(item.Input.Amount, (Communication.Enums.MeasurementUnit)item.Input.MeasurementUnit) *
-                    FormatProductionAmount(item.ProductionAmount, (Communication.Enums.ProductionMeasurementUnit)item.ProductionMeasurementUnit));
-            }
-            foreach (var item in overheads)
-            {
-                productionPrice = productionPrice + (
-                    (decimal)product.ProductionTime.TotalHours * item.CostPerHour / product.Servings
-                    );
-            }
-            return productionPrice;
         }
 
         private void Validate(RequestRegisterOrderJson request)
         {
             var result = new RegisterOrderValidator().Validate(request);
-            if(!result.IsValid)
+            if (!result.IsValid)
             {
                 var errors = result.Errors.Select(e => e.ErrorMessage).ToList();
                 throw new ErrorOnValidationException(errors);

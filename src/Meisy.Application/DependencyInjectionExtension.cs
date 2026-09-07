@@ -70,6 +70,7 @@ namespace Meisy.Application
 
             services.AddScoped<IRegisterOrderUseCase, RegisterOrderUseCase>();
             services.AddScoped<IGetAllOrderUseCase, GetAllOrderUseCase>();
+            services.AddScoped<IUpdateOrderUseCase, UpdateOrderUseCase>();
             services.AddScoped<IUpdateOrderStatusUseCase, UpdateOrderStatusUseCase>();
             services.AddScoped<ICancelOrderStatusUseCase, CancelOrderStatusUseCase>();
 

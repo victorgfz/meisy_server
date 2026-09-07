@@ -1,4 +1,4 @@
-﻿using Meisy.Domain.Models;
+using Meisy.Domain.Models;
 using Meisy.Domain.Repositories.Order;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +18,14 @@ namespace Meisy.Infrastructure.Data.Repositories.Order
             await _dbContext.Orders.AddAsync(order);
         }
 
+        public void DeleteOrderProducts(List<Domain.Entities.OrderProduct> orderProducts)
+        {
+            foreach (var item in orderProducts)
+            {
+                _dbContext.Order_Products.Remove(item);
+            }
+        }
+
         public async Task<List<Domain.Entities.Order>> GetAll(int companyId)
         {
             return await _dbContext.Orders
@@ -30,7 +38,9 @@ namespace Meisy.Infrastructure.Data.Repositories.Order
 
         public async Task<Domain.Entities.Order?> GetByIdForUpdate(int companyId, int orderId)
         {
-            return await _dbContext.Orders.FirstOrDefaultAsync(o => o.CompanyId == companyId && o.Id == orderId);
+            return await _dbContext.Orders
+                .Include(o => o.OrderProducts)
+                .FirstOrDefaultAsync(o => o.CompanyId == companyId && o.Id == orderId);
         }
 
         public async Task<List<Domain.Entities.Order>> GetAllByMonth(int companyId, DateTime date)

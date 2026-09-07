@@ -1,8 +1,8 @@
-﻿using AutoMapper;
+using AutoMapper;
+using Meisy.Application.Utils;
 using Meisy.Communication.Responses;
 using Meisy.Communication.Responses.Products;
 using Meisy.Domain.Entities;
-using Meisy.Domain.Enums;
 using Meisy.Domain.Repositories.Overhead;
 using Meisy.Domain.Repositories.Product;
 using Meisy.Domain.Services.LoggedUser;
@@ -39,46 +39,22 @@ namespace Meisy.Application.UseCases.Products.Get
             var entityProduct = _mapper.Map<ResponseDetailedProductJson>(product);
             AddProductInputs(product, entityProduct);
 
-            var overheads =  await _overheadReadRepository.GetAll(companyId);
+            var overheads = await _overheadReadRepository.GetAll(companyId);
             AddProductOverheads(overheads, entityProduct, (decimal)product.ProductionTime.TotalHours, product.Servings);
-           
+
             return entityProduct;
-        }
-
-        private static decimal FormatAmount(double amount, Communication.Enums.MeasurementUnit unit)
-        {
-            var multiplier = unit switch
-            {
-                Communication.Enums.MeasurementUnit.kg => 1000m,
-                Communication.Enums.MeasurementUnit.l => 1000m,
-                _ => 1m
-            };
-
-            return (decimal)amount * multiplier;
-        }
-
-        private static decimal FormatProductionAmount( double amount, Communication.Enums.ProductionMeasurementUnit unit)
-        {
-            var multiplier = unit switch
-            {
-                Communication.Enums.ProductionMeasurementUnit.kg => 1000m,
-                Communication.Enums.ProductionMeasurementUnit.l => 1000m,
-                Communication.Enums.ProductionMeasurementUnit.tsp => 5m,
-                Communication.Enums.ProductionMeasurementUnit.tbscp => 15m,
-                _ => 1m
-            };
-
-            return (decimal)amount * multiplier;
         }
 
         private void AddProductInputs(Product product, ResponseDetailedProductJson entity)
         {
-            foreach(var item in product.ProductInputs)
+            foreach (var item in product.ProductInputs)
             {
-                var productionPrice =
-                    item.Input.Price /
-                    FormatAmount(item.Input.Amount, (Communication.Enums.MeasurementUnit)item.Input.MeasurementUnit)*
-                    FormatProductionAmount(item.ProductionAmount, (Communication.Enums.ProductionMeasurementUnit)item.ProductionMeasurementUnit);
+                var formattedAmount = ProductCostUtils.FormatAmount(item.Input.Amount, (Communication.Enums.MeasurementUnit)item.Input.MeasurementUnit);
+                var formattedProductionAmount = ProductCostUtils.FormatProductionAmount(item.ProductionAmount, (Communication.Enums.ProductionMeasurementUnit)item.ProductionMeasurementUnit);
+
+                var productionPrice = formattedAmount > 0
+                    ? (item.Input.Price / formattedAmount) * formattedProductionAmount
+                    : 0;
 
                 entity.ProductInputs.Add(new ResponseDetailedProductInputsJson
                 {
@@ -94,13 +70,17 @@ namespace Meisy.Application.UseCases.Products.Get
 
         private void AddProductOverheads(List<Overhead> overheads, ResponseDetailedProductJson entity, decimal productionTime, int servings)
         {
-            foreach(var item in overheads)
+            foreach (var item in overheads)
             {
+                var totalCost = servings > 0
+                    ? productionTime * item.CostPerHour / servings
+                    : 0;
+
                 entity.ProductOverheads.Add(new ResponseDetailedProductOverheadsJson
                 {
                     Id = item.Id,
                     Type = (Communication.Enums.OverheadType)item.Type,
-                    TotalCost = productionTime * item.CostPerHour / servings
+                    TotalCost = totalCost
                 });
             }
         }
