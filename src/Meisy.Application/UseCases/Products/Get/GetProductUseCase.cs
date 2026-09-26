@@ -52,8 +52,8 @@ namespace Meisy.Application.UseCases.Products.Get
                 var formattedAmount = ProductCostUtils.FormatAmount(item.Input.Amount, (Communication.Enums.MeasurementUnit)item.Input.MeasurementUnit);
                 var formattedProductionAmount = ProductCostUtils.FormatProductionAmount(item.ProductionAmount, (Communication.Enums.ProductionMeasurementUnit)item.ProductionMeasurementUnit);
 
-                var productionPrice = formattedAmount > 0
-                    ? (item.Input.Price / formattedAmount) * formattedProductionAmount
+                var productionPrice = formattedAmount > 0 && product.Servings > 0
+                    ? (item.Input.Price / formattedAmount) * formattedProductionAmount / product.Servings
                     : 0;
 
                 entity.ProductInputs.Add(new ResponseDetailedProductInputsJson
