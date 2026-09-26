@@ -27,6 +27,7 @@ using Meisy.Application.UseCases.Products.Register;
 using Meisy.Application.UseCases.Products.Update;
 using Meisy.Application.UseCases.Reports.GetAll;
 using Meisy.Application.UseCases.Reports.GetInfoDashboard;
+using Meisy.Application.UseCases.Users.GetProfile;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Meisy.Application
@@ -80,6 +81,8 @@ namespace Meisy.Application
 
             services.AddScoped<IGetInfoDashboardReportUseCase, GetInfoDashboardReportUseCase>();
             services.AddScoped<IGetAllReportUseCase, GetAllReportUseCase>();
+
+            services.AddScoped<IGetProfileUseCase, GetProfileUseCase>();
         }
     }
 }

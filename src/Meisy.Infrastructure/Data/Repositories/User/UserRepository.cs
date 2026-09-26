@@ -1,3 +1,4 @@
+using Meisy.Domain.Models;
 using Meisy.Domain.Repositories;
 using Meisy.Domain.Repositories.User;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +44,30 @@ namespace Meisy.Infrastructure.Data.Repositories.User
         public async Task<Domain.Entities.User?> GetByRefreshToken(string refreshToken)
         {
             return await _dbContext.Users.Include(u => u.Company).FirstOrDefaultAsync(user => user.RefreshToken != null && user.RefreshToken.Equals(refreshToken));
+        }
+
+        public async Task<Domain.Entities.User?> GetByIdWithCompany(int companyId, int userId)
+        {
+            return await _dbContext.Users.AsNoTracking().Include(u => u.Company).FirstOrDefaultAsync(user => user.Id == userId && user.CompanyId == companyId);
+        }
+
+        public async Task<List<UserOrdersSummary>> GetOrdersRanking(int companyId)
+        {
+            return await _dbContext.Users
+                .AsNoTracking()
+                .Where(u => u.CompanyId == companyId)
+                .Select(u => new UserOrdersSummary
+                {
+                    UserId = u.Id,
+                    Name = u.Name,
+                    QuantityOfOrders = _dbContext.Orders.Count(o => o.CompanyId == companyId && o.SellerId == u.Id && o.Status != Domain.Enums.OrderStatus.Cancelled),
+                    TotalRevenue = _dbContext.Orders
+                        .Where(o => o.CompanyId == companyId && o.SellerId == u.Id && o.Status == Domain.Enums.OrderStatus.Completed)
+                        .Sum(o => (decimal?)o.TotalPrice) ?? 0
+                })
+                .OrderByDescending(u => u.QuantityOfOrders)
+                .ThenBy(u => u.Name)
+                .ToListAsync();
         }
     }
 }
