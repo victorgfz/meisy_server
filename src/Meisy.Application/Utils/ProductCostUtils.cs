@@ -32,9 +32,6 @@ namespace Meisy.Application.Utils
 
         public static decimal CalculateProductCost(Product product, List<Overhead> overheads)
         {
-            // Custo por porção: custo total da receita dividido pela quantidade de porções que ela rende
-            if (product.Servings <= 0) return 0;
-
             decimal productionPrice = 0;
 
             if (product.ProductInputs is not null)
@@ -52,15 +49,15 @@ namespace Meisy.Application.Utils
                 }
             }
 
-            if (overheads is not null)
+            if (overheads is not null && product.Servings > 0)
             {
                 foreach (var item in overheads)
                 {
-                    productionPrice += (decimal)product.ProductionTime.TotalHours * item.CostPerHour;
+                    productionPrice += (decimal)product.ProductionTime.TotalHours * item.CostPerHour / product.Servings;
                 }
             }
 
-            return productionPrice / product.Servings;
+            return productionPrice;
         }
     }
 }
